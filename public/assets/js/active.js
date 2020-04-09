@@ -1,6 +1,6 @@
 /*********************************************************************************
 
-    Template Name: Boighor Bookshop Responsive Bootstrap4 Template 
+    Template Name: Boighor Bookshop Responsive Bootstrap4 Template
     Version: 1.0
 
 **********************************************************************************/
@@ -43,7 +43,7 @@
 (function($) {
     'use strict';
 
-    
+
 
 /*============ Scroll Up Activation ============*/
     $.scrollUp({
@@ -115,7 +115,7 @@
               breakpoint: 576,
               settings: {
                 dots: false,
-                slidesToShow: 1,  
+                slidesToShow: 1,
                 centerPadding: '0px',
                 }
             },
@@ -144,6 +144,7 @@
 /*=============  Brand Activation  ==============*/
     $('.brand__activation').owlCarousel({
         loop:true,
+        rtl:true,
         margin:0,
         nav:true,
         autoplay: false,
@@ -174,6 +175,7 @@
 /*=============  Produst Activation  ==========*/
     $('.productcategory__slide').owlCarousel({
         loop:true,
+        rtl:true,
         margin:0,
         nav:true,
         autoplay: false,
@@ -205,6 +207,7 @@
 /*=============  Produst Activation  ==========*/
     $('.productcategory__slide--2').owlCarousel({
         loop:true,
+        rtl:true,
         margin:0,
         nav:true,
         autoplay: false,
@@ -233,6 +236,7 @@
 /*=============  Product Activation ============*/
     $('.product__indicator--4').owlCarousel({
         loop:true,
+        rtl:true,
         margin:0,
         nav:true,
         autoplay: false,
@@ -259,11 +263,12 @@
             }
         }
     });
-  
+
 
 /*=============  Product Activation  ==============*/
     $('.furniture--4').owlCarousel({
         loop:true,
+        rtl:true,
         margin: 0,
         nav:true,
         autoplay: false,
@@ -361,6 +366,7 @@
 /*=============  Slider Activation  ==============*/
     $('.slide__activation').owlCarousel({
         loop:true,
+        rtl:true,
         margin: 0,
         nav:true,
         autoplay: false,
@@ -475,7 +481,7 @@
     });
 
 
-/*====== Price Slider Active ======*/ 
+/*====== Price Slider Active ======*/
     $('#slider-range').slider({
         range: true,
         min: 10,
@@ -492,7 +498,7 @@
 /*====== Dropdown ======*/
     $('.dropdown').parent('.drop').css('position' , 'relative');
 
-	
+
 /*====== slick slider ======*/
 	$('.center').slick({
 	  centerMode: true,
