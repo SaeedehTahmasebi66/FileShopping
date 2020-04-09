@@ -48,110 +48,125 @@
 					<div class="col-lg-8 d-none d-lg-block">
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
-								<li class="drop with--one--item"><a href="index.html">Home</a></li>
-								<li class="drop"><a href="#">Shop</a>
+								{{-- <li class="drop with--one--item"><a href="index.html">Home</a></li> --}}
+								<li class="drop"><a href="#">نرم افزار</a>
 									<div class="megamenu mega03">
 										<ul class="item item03">
-											<li class="title">Shop Layout</li>
-											<li><a href="shop-grid.html">Shop Grid</a></li>
-											<li><a href="single-product.html">Single Product</a></li>
+											<li class="title">نرم افراز</li>
+											<li><a href="shop-grid.html">آفیس</a></li>
+                                            <li><a href="single-product.html">ابزار پی دی اف</a></li>
+                                            <li><a href="checkout.html">ابزار دسکتاپ</a></li>
+											<li><a href="wishlist.html">ابزار رایت</a></li>
+											<li><a href="error404.html">ابزار ریستریج</a></li>
+                                            <li><a href="faq.html">ابزار سه بعدی سازی</a></li>
+                                            <li><a href="checkout.html">ابزار فلش</a></li>
+											<li><a href="wishlist.html">بازیابی اطلاعات</a></li>
+											<li><a href="error404.html">برنامه نویسی</a></li>
+											<li><a href="faq.html">بهینه ساز ویندوز</li>
 										</ul>
 										<ul class="item item03">
-											<li class="title">Shop Page</li>
-											<li><a href="my-account.html">My Account</a></li>
-											<li><a href="cart.html">Cart Page</a></li>
-											<li><a href="checkout.html">Checkout Page</a></li>
-											<li><a href="wishlist.html">Wishlist Page</a></li>
-											<li><a href="error404.html">404 Page</a></li>
-											<li><a href="faq.html">Faq Page</a></li>
+											<li class="title">اینترنت</li>
+											<li><a href="my-account.html">مدیریت دانلود</a></li>
+											<li><a href="cart.html">ابزار اینترنت</a></li>
+											<li><a href="checkout.html">مرورگر وب</a></li>
+											<li><a href="wishlist.html">کنترل از راه دور</a></li>
+											<li><a href="error404.html">مدیریت اف تی پی</a></li>
+                                            <li><a href="faq.html">ابزار شبکه</a></li>
+                                            <li><a href="faq.html">سرور</a></li>
 										</ul>
 										<ul class="item item03">
-											<li class="title">Bargain Books</li>
-											<li><a href="shop-grid.html">Bargain Bestsellers</a></li>
-											<li><a href="shop-grid.html">Activity Kits</a></li>
-											<li><a href="shop-grid.html">B&N Classics</a></li>
-											<li><a href="shop-grid.html">Books Under $5</a></li>
-											<li><a href="shop-grid.html">Bargain Books</a></li>
+											<li class="title">مالتی مدیا</li>
+											<li><a href="shop-grid.html">پلیر موزیک و فیلم</a></li>
+											<li><a href="shop-grid.html">نمایش فیلم</a></li>
+											<li><a href="shop-grid.html">پخش صوت</a></li>
+											<li><a href="shop-grid.html">ویرایشگر فیلم</a></li>
+                                            <li><a href="shop-grid.html">ویرایشگر صوت</a></li>
+                                            <li><a href="faq.html">مبدل صوتی و تصویری</a></li>
+                                            <li><a href="faq.html">کدکهای صوتیو تصویری</a></li>
+                                            <li><a href="faq.html">تصویربرداری از دسکتاپ</a></li>
+                                        </ul>
+                                        <ul class="item item03">
+											<li class="title">امنیتی</li>
+											<li><a href="shop-grid.html">ابزار امنیتی</a></li>
+                                            <li><a href="single-product.html">آنتی ویروس</a></li>
+                                            <li><a href="faq.html">فایروال</a></li>
+                                            <li><a href="faq.html">ضدهک و جاسوسی</a></li>
+                                            <li><a href="faq.html">حذف و پاکسازی اطلاعات</a></li>
+
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="shop-grid.html">Books</a>
+								<li class="drop"><a href="shop-grid.html">سیستم عامل</a>
 									<div class="megamenu mega03">
 										<ul class="item item03">
-											<li class="title">Categories</li>
-											<li><a href="shop-grid.html">Biography </a></li>
-											<li><a href="shop-grid.html">Business </a></li>
-											<li><a href="shop-grid.html">Cookbooks </a></li>
-											<li><a href="shop-grid.html">Health & Fitness </a></li>
-											<li><a href="shop-grid.html">History </a></li>
+											<li class="title">ویندوز</li>
+											<li><a href="shop-grid.html">ویندوز 10</a></li>
+											<li><a href="shop-grid.html">ویندوز 8.1</a></li>
+											<li><a href="shop-grid.html">ویندوز 7</a></li>
+											<li><a href="shop-grid.html">ویندوز xp</a></li>
+											<li><a href="shop-grid.html">ویندوز Server</a></li>
 										</ul>
 										<ul class="item item03">
-											<li class="title">Customer Favourite</li>
-											<li><a href="shop-grid.html">Mystery</a></li>
-											<li><a href="shop-grid.html">Religion & Inspiration</a></li>
-											<li><a href="shop-grid.html">Romance</a></li>
-											<li><a href="shop-grid.html">Fiction/Fantasy</a></li>
-											<li><a href="shop-grid.html">Sleeveless</a></li>
-										</ul>
+											<li class="title">سایر سیستم عامل ها</li>
+											<li><a href="shop-grid.html">لینوکس</a></li>
+											<li><a href="shop-grid.html">مکینتاش</a></li>
+                                            <li><a href="shop-grid.html">اندروید</a></li>
+                                        </ul>
 										<ul class="item item03">
-											<li class="title">Collections</li>
-											<li><a href="shop-grid.html">Science </a></li>
-											<li><a href="shop-grid.html">Fiction/Fantasy</a></li>
-											<li><a href="shop-grid.html">Self-Improvemen</a></li>
-											<li><a href="shop-grid.html">Home & Garden</a></li>
-											<li><a href="shop-grid.html">Humor Books</a></li>
+											<li class="title">سایر بخش ها</li>
+											<li><a href="shop-grid.html"></a></li>
+											<li><a href="shop-grid.html">مجازی سازی</a></li>
+											<li><a href="shop-grid.html">آپدیت ویندوز</a></li>
+											<li><a href="shop-grid.html">فعال سازی ویندوز و آفیس</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="shop-grid.html">Kids</a>
+								<li class="drop"><a href="shop-grid.html">موبایل</a>
 									<div class="megamenu mega02">
 										<ul class="item item02">
-											<li class="title">Top Collections</li>
-											<li><a href="shop-grid.html">American Girl</a></li>
-											<li><a href="shop-grid.html">Diary Wimpy Kid</a></li>
-											<li><a href="shop-grid.html">Finding Dory</a></li>
-											<li><a href="shop-grid.html">Harry Potter</a></li>
-											<li><a href="shop-grid.html">Land of Stories</a></li>
+											<li class="title">نرم افزار</li>
+											<li><a href="shop-grid.html">برنامه های کاربردی</a></li>
+											<li><a href="shop-grid.html">مدیریت اپلیکیشن ها</a></li>
+											<li><a href="shop-grid.html"></a></li>
+											<li><a href="shop-grid.html">مدیریت ایمیل</a></li>
+                                            <li><a href="shop-grid.html">مدیریت فایل</a></li>
+                                            <li><a href="shop-grid.html">پلیر موزیک و فیلم</a></li>
+
 										</ul>
 										<ul class="item item02">
-											<li class="title">More For Kids</li>
-											<li><a href="shop-grid.html">B&N Educators</a></li>
-											<li><a href="shop-grid.html">B&N Kids' Club</a></li>
-											<li><a href="shop-grid.html">Kids' Music</a></li>
-											<li><a href="shop-grid.html">Toys & Games</a></li>
-											<li><a href="shop-grid.html">Hoodies</a></li>
+											<li class="title">بازی</li>
+											<li><a href="shop-grid.html">اکشن</a></li>
+											<li><a href="shop-grid.html">ماجراجویی</a></li>
+											<li><a href="shop-grid.html">سرگرمی</a></li>
+											<li><a href="shop-grid.html">ورزشی</a></li>
+											<li><a href="shop-grid.html">موزیکال</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="#">Pages</a>
+								<li class="drop"><a href="#">گرافیک</a>
 									<div class="megamenu dropdown">
 										<ul class="item item01">
-											<li><a href="about.html">About Page</a></li>
-											<li class="label2"><a href="portfolio.html">Portfolio</a>
+											<li><a href="about.html">پلاگین فتوشاپ</a></li>
+											{{-- <li class="label2"><a href="portfolio.html">Portfolio</a>
 												<ul>
 													<li><a href="portfolio.html">Portfolio</a></li>
 													<li><a href="portfolio-details.html">Portfolio Details</a></li>
 												</ul>
-											</li>
-											<li><a href="my-account.html">My Account</a></li>
-											<li><a href="cart.html">Cart Page</a></li>
-											<li><a href="checkout.html">Checkout Page</a></li>
-											<li><a href="wishlist.html">Wishlist Page</a></li>
-											<li><a href="error404.html">404 Page</a></li>
-											<li><a href="faq.html">Faq Page</a></li>
-											<li><a href="team.html">Team Page</a></li>
+											</li> --}}
+											<li><a href="my-account.html">پلاگین ویدئویی</a></li>
+											<li><a href="cart.html">فونت</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="blog.html">Blog</a>
+								{{-- <li class="drop"><a href="blog.html">Blog</a>
 									<div class="megamenu dropdown">
 										<ul class="item item01">
 											<li><a href="blog.html">Blog Page</a></li>
 											<li><a href="blog-details.html">Blog Details</a></li>
 										</ul>
 									</div>
-								</li>
-								<li><a href="contact.html">Contact</a></li>
+								</li> --}}
+								{{-- <li><a href="contact.html">Contact</a></li> --}}
 							</ul>
 						</nav>
 					</div>
@@ -381,10 +396,10 @@
 	            		<div class="col-lg-12">
 	            			<div class="slider__content">
 		            			<div class="contentbox">
-		            				<h2>Buy <span>your </span></h2>
-		            				<h2>favourite <span>Book </span></h2>
-		            				<h2>from <span>Here </span></h2>
-				                   	<a class="shopbtn" href="#">shop now</a>
+		            				<h2>معتبرترین <span>مارکت </span></h2>
+		            				<h2>تخصصی <span>دانلود </span></h2>
+		            				<h2>نرم افزار <span>در ایران </span></h2>
+				                   	<a class="shopbtn" href="#">همین حالاخرید کنید </a>
 		            			</div>
 	            			</div>
 	            		</div>
@@ -418,8 +433,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">New <span class="color--theme">Products</span></h2>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p>
+							<h2 class="title__be--2">جدیدترین <span class="color--theme">محصولات</span></h2>
+							{{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p> --}}
 						</div>
 					</div>
 				</div>
@@ -692,19 +707,19 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">All <span class="color--theme">Products</span></h2>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p>
+							<h2 class="title__be--2">دانلودهای <span class="color--theme">برگزیده</span></h2>
+							{{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p> --}}
 						</div>
 					</div>
 				</div>
 				<div class="row mt--50">
 					<div class="col-md-12 col-lg-12 col-sm-12">
 						<div class="product__nav nav justify-content-center" role="tablist">
-                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-all" role="tab">ALL</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-biographic" role="tab">BIOGRAPHIC</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-adventure" role="tab">ADVENTURE</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-children" role="tab">CHILDREN</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-cook" role="tab">COOK</a>
+                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-all" role="tab">همه</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-biographic" role="tab">سیستم عامل</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-adventure" role="tab">نرم افزار</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-children" role="tab">موبایل</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-cook" role="tab">گرافیک</a>
                         </div>
 					</div>
 				</div>
@@ -2749,8 +2764,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">Our <span class="color--theme">Blog</span></h2>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p>
+							<h2 class="title__be--2">اخبار <span class="color--theme">تکنولوژی</span></h2>
+							{{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p> --}}
 						</div>
 					</div>
 				</div>
@@ -2816,8 +2831,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center pb--50">
-							<h2 class="title__be--2">Best <span class="color--theme">Seller </span></h2>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p>
+							<h2 class="title__be--2">آخرین <span class="color--theme">دانلودها</span></h2>
+							{{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p> --}}
 						</div>
 					</div>
 				</div>
