@@ -108,7 +108,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Source Sans Pro", Helvetica, sans-serif; }
+  font-family: "Shabnam", Helvetica, sans-serif; }
 
 body {
   direction: rtl;
@@ -142,7 +142,7 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: Bitter, Georgia, serif;
+  font-family: "Shabnam", Georgia, serif;
   line-height: 1.3; }
 
 h1 {
@@ -203,7 +203,7 @@ samp {
 pre {
   background: #f5f5f5;
   color: #666;
-  font-family: monospace;
+  font-family: "Shabnam";
   font-size: 14px;
   margin: 20px 0;
   overflow: auto;
@@ -410,7 +410,13 @@ ins {
 /**
 Typography
 */
+@font-face {
+
+    font-family: "Shabnam";
+    src: url('fonts/shabnam/Shabnam.ttf');
+}
 html {
+    font-family: "Shabnam", sans-serif;
   overflow-x: hidden; }
 
 body {
@@ -419,7 +425,7 @@ body {
   line-height: 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Poppins", sans-serif;
+  font-family: "Shabnam", sans-serif;
   color: #333;
   font-weight: 400; }
 
@@ -441,7 +447,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, address, p, pre, blockquot
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Shabnam", sans-serif;
   line-height: 1.35; }
 
 h1,
@@ -814,9 +820,9 @@ a {
 
 /* Font specialized */
 .body--font {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Shabnam", sans-serif; }
 .heading--font {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Shabnam", sans-serif; }
 
 /* Height and width */
 .fullscreen {
@@ -1287,7 +1293,7 @@ Elements Styles
       color: #e59285; }
     .block-bg .close__wrap::after {
       content: "\f136";
-      font-family: Material-Design-Iconic-Font;
+      font-family: Shabnam;
       font-size: 24px;
       position: absolute;
       right: 0;
@@ -1409,7 +1415,7 @@ Elements Styles
   position: relative; }
 .box-menu-content .ppnav .ppmainmenu li.drop .ppmegamenu .item > li.label2 > a::after {
   content: "\f2fb";
-  font-family: Material-Design-Iconic-Font;
+  font-family: Shabnam;
   font-size: 15px;
   position: absolute;
   right: 0; }
@@ -1520,7 +1526,7 @@ Elements Styles
       color: #e59285; }
     .minicart-content-wrapper .micart__close::after {
       content: "\f136";
-      font-family: Material-Design-Iconic-Font;
+      font-family: Shabnam;
       font-size: 24px;
       position: absolute;
       right: 0;
@@ -1775,7 +1781,7 @@ Header Styles
     padding-right: 40px; }
     .header__area .menubar a.open_sidebar::after {
       content: "\f197";
-      font-family: "Material-Design-Iconic-Font";
+      font-family: "Shabnam";
       font-size: 26px;
       position: absolute;
       right: 0;
@@ -2029,7 +2035,7 @@ Header Styles
 .mainmenu__nav .meninmenu ul li.label2 > a::after {
   content: "\f2fb";
   transform: scaleX(-1);
-  font-family: Material-Design-Iconic-Font;
+  font-family: Shabnam;
   font-size: 15px;
   position: absolute;
   left: 0; }
@@ -2441,7 +2447,7 @@ nav.menu {
       background: #fff;
       box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.07);
       display: inline-block;
-      font-family: "Lato",sans-serif;
+      font-family: "Shabnam",sans-serif;
       height: 35px;
       line-height: 35px;
       padding: 0 15px;
@@ -2647,7 +2653,7 @@ nav.menu {
   color: #333;
   cursor: pointer;
   display: inline-block;
-  font-family: "Roboto",sans-serif;
+  font-family: "Shabnam",sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -2740,7 +2746,7 @@ nav.menu {
   max-width: 50%;
   padding-right: 50px; }
 .product-info h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Shabnam", sans-serif;
   font-size: 22px;
   margin-bottom: 10px;
   text-transform: capitalize; }
@@ -2773,7 +2779,7 @@ nav.menu {
   display: flex;
   font-size: 16px;
   text-transform: capitalize;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Shabnam", sans-serif; }
 .product-info .select__color .color__list {
   align-items: center;
   display: flex;
@@ -2803,7 +2809,7 @@ nav.menu {
 	font-weight:600;
     font-size: 16px;
     text-transform: capitalize;
-    font-family: "Poppins", sans-serif; }
+    font-family: "Shabnam", sans-serif; }
   .product-info .select__size .color__list {
     display: flex; }
     .product-info .select__size .color__list li {
@@ -2828,7 +2834,7 @@ h3.widget-title-modal {
   font-weight: 600;
   font-size: 16px;
   text-transform: capitalize;
-  font-family: "Poppins", sans-serif;
+  font-family: "Shabnam", sans-serif;
   padding-right: 14px; }
 .addtocart-btn {
   margin-top: 66px;
@@ -2971,7 +2977,7 @@ h3.widget-title-modal {
   text-align: center;
   text-transform: uppercase;
   top: 0;
-  font-family: Poppins;
+  font-family: Shabnam;
   transition: all 300ms ease-in 0s;
 }
       .newsletter__block .newsletter__box button:hover {
@@ -3032,7 +3038,7 @@ h3.widget-title-modal {
 .slide .slider__content h2 {
   color: #3c3c3c;
   font-size: 68px;
-  font-family: poppins;
+  font-family: "Shabnam";
   font-weight: 700;
   line-height: 1.2; }
 .slide .slider__content h1 {
@@ -3074,7 +3080,7 @@ h3.widget-title-modal {
       color: #ce7852; }
   .slider--15 .slide .slider__content h1 {
     color: #3c3c3c;
-    font-family: "tex_gyre_adventorbold";
+    font-family: "Shabnam";
     font-size: 80px;
     line-height: 1;
     margin-bottom: 50px; }
@@ -3705,7 +3711,7 @@ h3.widget-title-modal {
     .post__itam .content h3 {
 	  color: #333;
 	  display: block;
-	  font-family: "Open Sans",sans-serif;
+	  font-family: "Shabnam",sans-serif;
 	  font-size: 20px;
 	  font-weight: 600;
 	  line-height: 32px;
@@ -3788,7 +3794,7 @@ h3.widget-title-modal {
   padding: 50px 15%; }
 .video__area .content h3 {
   color: #2e2e2e;
-  font-family: "Satisfy",cursive;
+  font-family: "Shabnam",cursive;
   font-size: 24px;
   font-weight: normal;
   line-height: 35px; }
@@ -5035,7 +5041,7 @@ h3.widget-title-modal {
   box-shadow: none;
   color: #333;
   display: inline-block;
-  font-family: Poppins,Arial,Helvetica,sans-serif;
+  font-family: "Shabnam",Arial,Helvetica,sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 34px;
@@ -5308,7 +5314,7 @@ h3.widget-title-modal {
   background: #fff none repeat scroll 0 0;
   border-radius: 5px;
   display: block;
-  font-family: "Poppins", sans-serif;
+  font-family: "Shabnam", sans-serif;
   font-size: 16px;
   font-weight: 400;
   height: 50px;
@@ -5333,7 +5339,7 @@ h3.widget-title-modal {
   padding: 0 40px; }
 .cart__total__list li {
   color: #333444;
-  font-family: "Poppins", sans-serif;
+  font-family: "Shabnam", sans-serif;
   font-size: 16px;
   height: 60px;
   line-height: 60px; }

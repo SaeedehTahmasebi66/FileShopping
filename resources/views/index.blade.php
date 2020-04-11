@@ -12,9 +12,9 @@
 	<link rel="apple-touch-icon" href="{{asset('assets/images/icon.png')}}">
 
 	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	{{-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> --}}
+	{{-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet"> --}}
+	{{-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> --}}
 
 	<!-- Stylesheets -->
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
@@ -414,10 +414,10 @@
 	            		<div class="col-lg-12">
 	            			<div class="slider__content">
 		            			<div class="contentbox">
-		            				<h2>Buy <span>your </span></h2>
-		            				<h2>favourite <span>Book </span></h2>
-		            				<h2>from <span>Here </span></h2>
-				                   	<a class="shopbtn" href="#">shop now</a>
+		            				<h2>معتبرترین <span>مارکت </span></h2>
+		            				<h2>تخصصی <span>دانلود </span></h2>
+		            				<h2>نرم افزار <span>در ایران </span></h2>
+				                   	<a class="shopbtn" href="#">همین حالاخرید کنید </a>
 		            			</div>
 	            			</div>
 	            		</div>
