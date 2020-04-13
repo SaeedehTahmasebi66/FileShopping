@@ -4,7 +4,7 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<div class="logo">
-							<a href="index.html">
+							<a href="{{'/index'}}">
 								<img src="{{asset('assets/images/logo/logo.png')}}" alt="logo images">
 							</a>
 						</div>
@@ -12,7 +12,7 @@
 					<div class="col-lg-8 d-none d-lg-block">
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
-								{{-- <li class="drop with--one--item"><a href="index.html">Home</a></li> --}}
+								{{-- <li class="drop with--one--item"><a href="{{'/index'}}">Home</a></li> --}}
 								<li class="drop"><a href="{{route('shop-grid')}}">نرم افزار</a>
 									<div class="megamenu mega03">
 										<ul class="item item03">
@@ -217,7 +217,7 @@
 								</div> --}}
 								<!-- End Shopping Cart -->
 							</li>
-							<li class="setting__bar__icon"><a href="{{route('myaccount')}}"></a>
+							<li class="setting__bar__icon"><a href="{{route('login')}}"></a>
 								{{-- <div class="searchbar__content setting__block">
 									<div class="content-inner">
 										<div class="switcher-currency">
@@ -358,7 +358,7 @@
 					<div class="col-lg-12 d-none">
 						<nav class="mobilemenu__nav">
 							<ul class="meninmenu">
-								<li><a href="index.html">Home</a></li>
+                            <li><a href="{{'/index'}}">Home</a></li>
 								<li><a href="#">Pages</a>
 									<ul>
 										<li><a href="about.html">About Page</a></li>
