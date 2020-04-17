@@ -22,6 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //-------------------------------- Pages -------------------------------------------------
 Route::get('/index', function () {return view('index');});
+Route::get('/about', function () {return view('about');});
+Route::get('/contact', function () {return view('contact');});
 Route::get('/myaccount', function () {return view('my-account');})->name('myaccount');
 Route::get('/cart', function () {return view('cart');})->name('cart');
 Route::get('/wishlist', function () {return view('wishlist');})->name('wishlist');

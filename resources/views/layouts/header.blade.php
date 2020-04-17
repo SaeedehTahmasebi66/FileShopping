@@ -12,8 +12,24 @@
 					<div class="col-lg-8 d-none d-lg-block">
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
-								{{-- <li class="drop with--one--item"><a href="{{'/index'}}">Home</a></li> --}}
-								<li class="drop"><a href="{{route('shop-grid')}}">نرم افزار</a>
+                                <li class="drop with--one--item"><a href="{{'/index'}}">خانه</a></li>
+                                <li class="drop"><a href="#">دسته بندی محصولات</a>
+									<div class="megamenu dropdown">
+										<ul class="item item01">
+											<li class="label2"><a href="{{route('shop-grid')}}">برنامه نویسی</a>
+												<ul>
+													<li><a href="{{route('shop-grid')}}">برنامه نویسی وب</a></li>
+													<li><a href="{{route('shop-grid')}}">برنامه نویسی اندروید</a></li>
+												</ul>
+											</li>
+											<li><a href="{{route('shop-grid')}}">علوم و مهندسی کامپوتر</a></li>
+											<li><a href="{{route('shop-grid')}}">هوش مصنوعی</a></li>
+										</ul>
+									</div>
+                                </li>
+                                <li class="drop with--one--item"><a href="{{'/about'}}">درباره ما</a></li>
+                                <li class="drop with--one--item"><a href="{{'/contact'}}">تماس با ما</a></li>
+								{{-- <li class="drop"><a href="{{route('shop-grid')}}">نرم افزار</a>
 									<div class="megamenu mega03">
 										<ul class="item item03">
 											<li class="title">نرم افراز</li>
@@ -106,22 +122,8 @@
 											<li><a href="{{route('shop-grid')}}">موزیکال</a></li>
 										</ul>
 									</div>
-								</li>
-								<li class="drop"><a href="#">گرافیک</a>
-									<div class="megamenu dropdown">
-										<ul class="item item01">
-											<li><a href="about.html">پلاگین فتوشاپ</a></li>
-											{{-- <li class="label2"><a href="portfolio.html">Portfolio</a>
-												<ul>
-													<li><a href="portfolio.html">Portfolio</a></li>
-													<li><a href="portfolio-details.html">Portfolio Details</a></li>
-												</ul>
-											</li> --}}
-											<li><a href="{{route('shop-grid')}}">پلاگین ویدئویی</a></li>
-											<li><a href="{{route('shop-grid')}}">فونت</a></li>
-										</ul>
-									</div>
-								</li>
+								</li> --}}
+
 								{{-- <li class="drop"><a href="blog.html">Blog</a>
 									<div class="megamenu dropdown">
 										<ul class="item item01">

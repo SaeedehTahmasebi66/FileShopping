@@ -377,7 +377,7 @@ caption,
 th,
 td {
   font-weight: normal;
-  text-align: left; }
+  text-align: right; }
 
 caption {
   font-size: 16px;
@@ -2035,7 +2035,7 @@ Header Styles
 .mainmenu__nav .meninmenu ul li.label2 > a::after {
   content: "\f2fb";
   transform: scaleX(-1);
-  font-family: Shabnam;
+  font-family: Material-Design-Iconic-Font;
   font-size: 15px;
   position: absolute;
   left: 0; }
@@ -4058,7 +4058,7 @@ h3.widget-title-modal {
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
-    margin: 0 10px 0 0;
+    margin: 0 0 0 10px;
     text-transform: capitalize; }
   .product__info__main .box-tocart .input-text {
     border: 1px solid #ebebeb;
@@ -4067,7 +4067,7 @@ h3.widget-title-modal {
     height: 40px;
     text-align: center;
     width: 100px;
-    margin: 0 15px 15px 0; }
+    margin: 0 15px 0 15px; }
 .product__info__main .box-tocart .addtocart__actions .tocart {
   background: #e59285 none repeat scroll 0 0;
   border: 0 none;
@@ -4088,7 +4088,7 @@ h3.widget-title-modal {
   color: #353535;
   display: inline-block;
   font-weight: 600;
-  margin-right: 14px;
+  margin-left: 14px;
   text-align: center;
 }
 .product__info__main .product-share > ul li a {
@@ -4117,7 +4117,7 @@ h3.widget-title-modal {
   font-size: 0;
   height: 40px;
   line-height: 36px;
-  margin-left: 7px;
+  margin-right: 7px;
   padding: 0;
   position: relative;
   text-align: center;
@@ -5062,7 +5062,7 @@ h3.widget-title-modal {
   .wn__address .single__address i {
     color: #353535;
     font-size: 20px;
-    margin-right: 20px;
+    margin-left: 20px;
     margin-top: 10px; }
   .wn__address .single__address .content span {
     color: #353535;
@@ -5756,7 +5756,7 @@ a.checkout__title {
   .wedget__categories.poroduct--cat ul li {
     border-bottom: 1px dashed #e1e1e1;
     line-height: 45px;
-    text-align: left;
+    text-align: right;
     text-transform: capitalize; }
     .wedget__categories.poroduct--cat ul li a {
       color: #333;
@@ -5765,8 +5765,8 @@ a.checkout__title {
       .wedget__categories.poroduct--cat ul li a:hover {
         color: #e59285; }
       .wedget__categories.poroduct--cat ul li a span {
-        color: ##333;
-        float: right; }
+        color: #333;
+        float: left; }
 .wedget__categories.pro--range {
   margin: 0 0 30px; }
 .wedget__categories.poroduct--compare {
@@ -5920,7 +5920,7 @@ a.checkout__title {
   border: 1px solid #e1e1e1;
   color: #898888;
   height: 30px;
-  margin-left: 10px;
+  margin-right: 10px;
   padding: 0 10px; }
 .list__view {
   display: flex; }
@@ -5941,7 +5941,7 @@ a.checkout__title {
         transition-timing-function: linear; }
   .list__view .content {
     flex-basis: 70%;
-    padding-left: 32px; }
+    padding-right: 32px; }
     .list__view .content h2 {
       margin: 5px 0 0; }
       .list__view .content h2 a {

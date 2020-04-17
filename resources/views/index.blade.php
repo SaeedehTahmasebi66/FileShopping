@@ -46,7 +46,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">جدیدترین <span class="color--theme">محصولات</span></h2>
+							<h2 class="title__be--2">جدیدترین <span class="color--theme">آموزش ها</span></h2>
 							{{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p> --}}
 						</div>
 					</div>
@@ -320,7 +320,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">دانلودهای <span class="color--theme">برگزیده</span></h2>
+							<h2 class="title__be--2">محبوب ترین <span class="color--theme">آموزش ها </span></h2>
 							{{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p> --}}
 						</div>
 					</div>
@@ -329,10 +329,10 @@
 					<div class="col-md-12 col-lg-12 col-sm-12">
 						<div class="product__nav nav justify-content-center" role="tablist">
                             <a class="nav-item nav-link active" data-toggle="tab" href="#nav-all" role="tab">همه</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-biographic" role="tab">سیستم عامل</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-adventure" role="tab">نرم افزار</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-children" role="tab">موبایل</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-cook" role="tab">گرافیک</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-biographic" role="tab">برنامه نویسی</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-adventure" role="tab">علوم و مهندسی کامپیوتر</a>
+                            {{-- <a class="nav-item nav-link" data-toggle="tab" href="#nav-children" role="tab">مهندسی نرم افزار</a> --}}
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-cook" role="tab">هوش مصنوعی</a>
                         </div>
 					</div>
 				</div>
@@ -2377,7 +2377,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">اخبار <span class="color--theme">تکنولوژی</span></h2>
+							<h2 class="title__be--2">مقالات <span class="color--theme">برگزیده</span></h2>
 							{{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p> --}}
 						</div>
 					</div>
