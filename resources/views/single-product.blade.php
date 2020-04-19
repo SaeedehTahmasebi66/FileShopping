@@ -41,7 +41,7 @@
         						</div>
         						<div class="col-lg-6 col-12">
         							<div class="product__info__main">
-        								<h1>Chaz Kangeroo Hoodie</h1>
+        								<h1>{{$product['name']}}</h1>
         								<div class="product-reviews-summary d-flex">
         									<ul class="rating-summary d-flex">
     											<li><i class="zmdi zmdi-star-outline"></i></li>
@@ -52,11 +52,11 @@
         									</ul>
         								</div>
         								<div class="price-box">
-        									<span>$52.00</span>
+        									<span>{{$product['price']}} تومان</span>
         								</div>
 										<div class="product__overview">
-        									<p>Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.</p>
-        									<p>Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. </p>
+        									<p>{{$product['description']}}</p>
+        									<p> </p>
         								</div>
         								<div class="box-tocart d-flex">
         									<span>Qty</span>
@@ -72,7 +72,7 @@
 										<div class="product_meta">
 											<span class="posted_in">Categories:
 												<a href="#">Adventure</a>,
-												<a href="#">Kids' Music</a>
+												<a href="#">Kids' Music </a>
 											</span>
 										</div>
 										<div class="product-share">
@@ -100,7 +100,7 @@
 												</li>
 											</ul>
 										</div>
-        							</div>
+                                    </div>
         						</div>
         					</div>
         				</div>

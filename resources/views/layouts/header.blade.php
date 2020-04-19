@@ -16,14 +16,15 @@
                                 <li class="drop"><a href="#">دسته بندی محصولات</a>
 									<div class="megamenu dropdown">
 										<ul class="item item01">
-											<li class="label2"><a href="{{route('shop-grid')}}">برنامه نویسی</a>
+											<li class="label2"><a href="{{'/category/1'}}">برنامه نویسی</a>
 												<ul>
-													<li><a href="{{route('shop-grid')}}">برنامه نویسی وب</a></li>
-													<li><a href="{{route('shop-grid')}}">برنامه نویسی اندروید</a></li>
+													{{-- <li><a href="{{route('shop-grid')}}">برنامه نویسی وب</a></li>
+													<li><a href="{{route('shop-grid')}}">برنامه نویسی اندروید</a></li> --}}
 												</ul>
 											</li>
-											<li><a href="{{route('shop-grid')}}">علوم و مهندسی کامپوتر</a></li>
-											<li><a href="{{route('shop-grid')}}">هوش مصنوعی</a></li>
+											<li><a href="{{'/category/2'}}">علوم و مهندسی کامپوتر</a></li>
+                                            <li><a href="{{'/category/3'}}">هوش مصنوعی</a></li>
+                                            <li><a href="{{'/shop-grid'}}">همه محصولات</a></li>
 										</ul>
 									</div>
                                 </li>

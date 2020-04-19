@@ -118,19 +118,20 @@
         				<div class="tab__container">
 	        				<div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
 	        					<div class="row">
-	        						<!-- Start Single Product -->
+                                    <!-- Start Single Product -->
+                                    @foreach ($products as $product)
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/1.jpg')}}" alt="product image"></a>
-											<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/2.jpg')}}" alt="product image"></a>
+											<a class="first__img" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/books/1.jpg')}}" alt="product image"></a>
+											<a class="second__img animation1" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/books/2.jpg')}}" alt="product image"></a>
 											<div class="hot__box">
 												<span class="hot-label">BEST SALLER</span>
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="{{'/single-product'}}">robin parrish</a></h4>
+											<h4><a href="/single-product/{{$product->id}}">{{$product->name}}</a></h4>
 											<ul class="prize d-flex">
-												<li>$35.00</li>
+												<li>{{$product->price}} تومان</li>
 												<li class="old_prize">$35.00</li>
 											</ul>
 											<div class="action">
@@ -153,9 +154,10 @@
 												</ul>
 											</div>
 										</div>
-		        					</div>
+                                    </div>
+                                    @endforeach
 		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
+	        						{{-- <!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
 											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/3.jpg')}}" alt="product image"></a>
@@ -560,9 +562,9 @@
 												</ul>
 											</div>
 										</div>
-		        					</div>
+		        					</div> --}}
 		        					<!-- End Single Product -->
-	        					</div>
+                                </div>
 	        					<ul class="wn__pagination">
 	        						<li class="active"><a href="#">1</a></li>
 	        						<li><a href="#">2</a></li>
@@ -573,14 +575,15 @@
 	        				</div>
 	        				<div class="shop-grid tab-pane fade" id="nav-list" role="tabpanel">
 	        					<div class="list__view__wrapper">
-	        						<!-- Start Single Product -->
-	        						<div class="list__view">
+                                    <!-- Start Single Product -->
+                                    @foreach ($products as $product)
+	        						<div class="list__view mt--40">
 	        							<div class="thumb">
-	        								<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/product/1.jpg')}}" alt="product images"></a>
-	        								<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/product/2.jpg')}}" alt="product images"></a>
+	        								<a class="first__img" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/product/1.jpg')}}" alt="product images"></a>
+	        								<a class="second__img animation1" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/product/2.jpg')}}" alt="product images"></a>
 	        							</div>
 	        							<div class="content">
-	        								<h2><a href="{{'/single-product'}}">Ali Smith</a></h2>
+	        								<h2><a href="/single-product/{{$product->id}}">{{$product->name}}</a></h2>
 	        								<ul class="rating d-flex">
 	        									<li class="on"><i class="fa fa-star-o"></i></li>
 	        									<li class="on"><i class="fa fa-star-o"></i></li>
@@ -590,10 +593,10 @@
 	        									<li><i class="fa fa-star-o"></i></li>
 	        								</ul>
 	        								<ul class="prize__box">
-	        									<li>$111.00</li>
+	        									<li>{{$product->price}} تومان</li>
 	        									<li class="old__prize">$220.00</li>
 	        								</ul>
-	        								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
+	        								<p>{{$product->description}}</p>
 	        								<ul class="cart__action d-flex">
 	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
 	        									<li class="wishlist"><a href="cart.html"></a></li>
@@ -601,9 +604,10 @@
 	        								</ul>
 
 	        							</div>
-	        						</div>
+                                    </div>
+                                    @endforeach
 	        						<!-- End Single Product -->
-	        						<!-- Start Single Product -->
+	        						{{-- <!-- Start Single Product -->
 	        						<div class="list__view mt--40">
 	        							<div class="thumb">
 	        								<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/product/2.jpg')}}" alt="product images"></a>
@@ -721,9 +725,9 @@
 	        								</ul>
 	        							</div>
 	        						</div>
-	        						<!-- End Single Product -->
+	        						<!-- End Single Product --> --}}
 	        					</div>
-	        				</div>
+                            </div>
         				</div>
         			</div>
         		</div>

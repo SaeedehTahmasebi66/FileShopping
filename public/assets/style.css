@@ -4174,7 +4174,7 @@ h3.widget-title-modal {
     text-transform: uppercase;
     padding: 0; }
     .product__info__detailed .pro_details_nav a.nav-item + .nav-item {
-      margin-left: 38px; }
+      margin-right: 38px; }
     .product__info__detailed .pro_details_nav a.nav-item::after {
       background: #2e2e2e none repeat scroll 0 0;
       bottom: -2px;
@@ -4227,7 +4227,7 @@ h3.widget-title-modal {
   .product__info__detailed .review__attribute .review__ratings__type .review-ratings .rating-summary .rating li.off i {
     color: #c7c7c7; }
 .product__info__detailed .review__attribute .review__ratings__type .review-content {
-  margin-left: 130px; }
+  margin-right: 130px; }
   .product__info__detailed .review__attribute .review__ratings__type .review-content p {
     line-height: 24px;
     font-size: 12px;
@@ -5961,7 +5961,7 @@ a.checkout__title {
         .list__view .content .prize__box li.old__prize {
           color: #868888;
           font-size: 16px;
-          margin-left: 10px;
+          margin-right: 10px;
           text-decoration: line-through; }
     .list__view .content p {
       color: #333;
