@@ -31,8 +31,19 @@ class ProductController extends Controller
     // public function popularProducts(){
 
     //     $popularProducts = Product::orderBy('clicks','desc')->take(2)->get();
-    //     return view('index',compact('popularProducts'));
+    //     return view('shop-grid',compact('popularProducts'));
     // }
+
+
+    public function searchProducts(Request $request){
+
+        $term = $request->post('search');
+        $products = Product::whereHas('category', function($query) use($term) {
+            $query->where('name', 'like', '%'.$term.'%');
+        })->orWhere('name','LIKE','%'.$term.'%')->orderBy('name', 'asc')->get();
+
+        return view('shop-grid',compact('products'));
+    }
 
 
     public function addToCart(){
@@ -42,15 +53,4 @@ class ProductController extends Controller
 
     }
 
-    public function deleteProducts(){
-
-    }
-
-    public function updateProducts(){
-
-    }
-
-    public function availableProducts(){
-
-    }
 }

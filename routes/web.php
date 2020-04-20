@@ -37,3 +37,4 @@ Route::get('/single-product/{id}', 'ProductController@singleProduct');
 
 Route::get('/blog-details', function () {return view('blog-details');})->name('blog-details');
 
+Route::get('/search', 'ProductController@searchProducts');

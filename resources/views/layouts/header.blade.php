@@ -406,9 +406,9 @@
 		<!-- //Header -->
 		<!-- Start Search Popup -->
 		<div class="brown--color box-search-content search_active block-bg close__top">
-			<form id="search_mini_form" class="minisearch" action="#">
+			<form id="search_mini_form" class="minisearch" action="/search" method="GET">
 				<div class="field__search">
-					<input type="text" placeholder="عنوان درس مورد نظر خود را وارد کرده و همین امروز شروع به آموختن کنید.">
+					<input name="search" type="text" placeholder="عنوان درس مورد نظر خود را وارد کرده و همین امروز شروع به آموختن کنید.">
 					<div class="action">
 						<a href="#"><i class="zmdi zmdi-search"></i></a>
 					</div>
