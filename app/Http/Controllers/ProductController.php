@@ -9,21 +9,30 @@ class ProductController extends Controller
 {
     public function allProducts(){
 
-        $products=Product::all();
+        $products = Product::all();
         return view('shop-grid',compact('products'));
     }
 
     public function singleProduct($id){
 
         $product = Product::findOrFail($id);
+        // $product->increment('clicks'); // Increment the value in the clicks column.
+        // $product->update(); // Save our updated product.
         return view('single-product',compact('product'));
     }
 
-    public function latestProducts(){
+    public function latestPopularProducts(){
 
-        $products= Product::orderBy('created_at','desc')->take(6)->get();
-        return view('index',compact('products'));
+        $products = Product::orderBy('created_at','desc')->take(6)->get();
+        $popularProducts = Product::orderBy('clicks','desc')->take(6)->get();
+        return view('index',compact('products','popularProducts'));
     }
+
+    // public function popularProducts(){
+
+    //     $popularProducts = Product::orderBy('clicks','desc')->take(2)->get();
+    //     return view('index',compact('popularProducts'));
+    // }
 
 
     public function addToCart(){

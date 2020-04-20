@@ -1293,7 +1293,7 @@ Elements Styles
       color: #e59285; }
     .block-bg .close__wrap::after {
       content: "\f136";
-      font-family: Shabnam;
+      font-family: Material-Design-Iconic-Font;
       font-size: 24px;
       position: absolute;
       right: 0;

@@ -1,23 +1,6 @@
 ﻿@extends('layouts.mainmaster')
 @section('content')
-        <!-- Start Bradcaump area -->
-        <div class="ht__bradcaump__area bg-image--6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="bradcaump__inner text-center">
-                        	<h2 class="bradcaump-title">Shop Grid</h2>
-                            <nav class="bradcaump-content">
-                              <a class="breadcrumb_item" href="{{'/index'}}">Home</a>
-                              <span class="brd-separetor">/</span>
-                              <span class="breadcrumb_item active">Shop Grid</span>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Bradcaump area -->
+
         <!-- Start Shop Page -->
         <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
         	<div class="container">
@@ -120,16 +103,18 @@
 	        					<div class="row">
                                     <!-- Start Single Product -->
                                     @foreach ($products as $product)
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
+		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12" data-product-id="{{$product->id}}">
 			        					<div class="product__thumb">
-											<a class="first__img" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/books/1.jpg')}}" alt="product image"></a>
-											<a class="second__img animation1" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/books/2.jpg')}}" alt="product image"></a>
-											<div class="hot__box">
+                                            @foreach($product->Image()->get() as $Img)
+											<a class="first__img js-click-product" href="/single-product/{{$product->id}}"><img src="{{asset('/') . $Img->path}}" alt="product image"></a>
+                                            {{-- <a class="second__img animation1 js-click-product" href="/single-product/{{$product->id}}"><img src="{{asset('/') . $Img->path}}" alt="product image"></a> --}}
+                                            @endforeach
+											{{-- <div class="hot__box">
 												<span class="hot-label">BEST SALLER</span>
-											</div>
+											</div> --}}
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="/single-product/{{$product->id}}">{{$product->name}}</a></h4>
+											<h4><a class="js-click-product" href="/single-product/{{$product->id}}">{{$product->name}}</a></h4>
 											<ul class="prize d-flex">
 												<li>{{$product->price}} تومان</li>
 												<li class="old_prize">$35.00</li>
@@ -579,9 +564,11 @@
                                     @foreach ($products as $product)
 	        						<div class="list__view mt--40">
 	        							<div class="thumb">
-	        								<a class="first__img" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/product/1.jpg')}}" alt="product images"></a>
-	        								<a class="second__img animation1" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/product/2.jpg')}}" alt="product images"></a>
-	        							</div>
+                                            @foreach($product->Image()->get() as $Img)
+	        								<a class="first__img" href="/single-product/{{$product->id}}"><img src="{{asset('/') . $Img->path}}" alt="product images"></a>
+	        								{{-- <a class="second__img animation1" href="/single-product/{{$product->id}}"><img src="{{asset('/') . $Img->path}}" alt="product images"></a> --}}
+                                            @endforeach
+                                        </div>
 	        							<div class="content">
 	        								<h2><a href="/single-product/{{$product->id}}">{{$product->name}}</a></h2>
 	        								<ul class="rating d-flex">

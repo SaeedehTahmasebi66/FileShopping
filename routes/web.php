@@ -22,9 +22,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //-------------------------------- Pages -------------------------------------------------
 // Route::get('/index', function () {return view('index');});
-Route::get('/index', 'ProductController@latestProducts');
+Route::get('/index', 'ProductController@latestPopularProducts');
+
 Route::get('/about', function () {return view('about');});
 Route::get('/contact', function () {return view('contact');});
+
 Route::get('/myaccount', function () {return view('my-account');})->name('myaccount');
 Route::get('/cart', function () {return view('cart');})->name('cart');
 Route::get('/wishlist', function () {return view('wishlist');})->name('wishlist');
@@ -33,4 +35,5 @@ Route::get('/shop-grid', 'ProductController@allProducts');
 Route::get('/category/{id}', 'CategoryController@selectedCategory');
 Route::get('/single-product/{id}', 'ProductController@singleProduct');
 
+Route::get('/blog-details', function () {return view('blog-details');})->name('blog-details');
 

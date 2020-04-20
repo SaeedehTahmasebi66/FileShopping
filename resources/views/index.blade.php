@@ -1,6 +1,6 @@
 @extends('layouts.mainmaster')
 @section('content')
-        <!-- Start Slider area -->
+        {{-- <!-- Start Slider area -->
         <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
         	<!-- Start Single Slide -->
 	        <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
@@ -39,7 +39,8 @@
             </div>
             <!-- End Single Slide -->
         </div>
-        <!-- End Slider area -->
+        <!-- End Slider area --> --}}
+
 		<!-- Start BEst Seller Area -->
 		<section class="wn__product__area brown--color pt--80  pb--30">
 			<div class="container">
@@ -58,11 +59,13 @@
 					<div class="product product__style--3">
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
-								<a class="first__img" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/books/1.jpg')}}" alt="product image"></a>
-								<a class="second__img animation1" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/books/2.jpg')}}" alt="product image"></a>
-								<div class="hot__box">
+                                @foreach($product->Image()->get() as $Img)
+								<a class="first__img" href="/single-product/{{$product->id}}"><img src="{{asset('/') . $Img->path}}" alt="product image"></a>
+                                @endforeach
+                                {{-- <a class="second__img animation1" href="/single-product/{{$product->id}}"><img src="{{asset('assets/images/books/2.png')}}" alt="product image"></a> --}}
+								{{-- <div class="hot__box">
 									<span class="hot-label">BEST SALLER</span>
-								</div>
+								</div> --}}
 							</div>
 							<div class="product__content content--center">
 								<h4><a href="/single-product/{{$product->id}}">{{$product->name}}</a></h4>
@@ -300,14 +303,14 @@
 				<div class="row">
 					<div class="col-lg-7 offset-lg-5 col-md-12 col-12 ptb--150">
 						<div class="section__title text-center">
-							<h2>Stay With Us</h2>
+							<h2>عضویت در خبرنامه</h2>
 						</div>
 						<div class="newsletter__block text-center">
-							<p>Subscribe to our newsletters now and stay up-to-date with new collections, the latest lookbooks and exclusive offers.</p>
+							<p>هم اکنون در خبرنامه های ما عضو شوید و با مجموعه های جدید و پیشنهادات اختصاصی به روز باشید.</p>
 							<form action="#">
 								<div class="newsletter__box">
-									<input type="email" placeholder="Enter your e-mail">
-									<button>Subscribe</button>
+									<input type="email" placeholder="ایمیل خود را وارد کنید">
+									<button>عضویت</button>
 								</div>
 							</form>
 						</div>
@@ -342,21 +345,24 @@
 					<!-- Start Single Tab Content -->
 					<div class="row single__tab tab-pane fade show active" id="nav-all" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
+                            @foreach ($popularProducts as $p)
 							<div class="single__product">
-								<!-- Start Single Product -->
+                                <!-- Start Single Product -->
 								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 									<div class="product product__style--3">
 										<div class="product__thumb">
-											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/1.jpg')}}" alt="product image"></a>
-											<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/2.jpg')}}" alt="product image"></a>
-											<div class="hot__box">
+                                            @foreach($p->Image()->get() as $Img)
+											<a class="first__img" href="/single-product/{{$p->id}}"><img src="{{asset('/') . $Img->path}}" alt="product image"></a>
+											{{-- <a class="second__img animation1" href="/single-product/{{$p->id}}"><img src="{{asset('assets/images/books/22.jpg')}}" alt="product image"></a> --}}
+                                            @endforeach
+                                            {{-- <div class="hot__box">
 												<span class="hot-label">BEST SALER</span>
-											</div>
+											</div> --}}
 										</div>
 										<div class="product__content content--center content--center">
-											<h4><a href="{{'/single-product'}}">Ghost</a></h4>
+											<h4><a href="/single-product/{{$p->id}}">{{$p->name}}</a></h4>
 											<ul class="prize d-flex">
-												<li>$50.00</li>
+												<li>{{$p->price}} تومان</li>
 												<li class="old_prize">$35.00</li>
 											</ul>
 											<div class="action">
@@ -380,10 +386,11 @@
 											</div>
 										</div>
 									</div>
-								</div>
+                                </div>
+
 								<!-- Start Single Product -->
 								<!-- Start Single Product -->
-								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+								{{-- <div class="col-lg-3 col-md-4 col-sm-6 col-12">
 									<div class="product product__style--3">
 										<div class="product__thumb">
 											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/3.jpg')}}" alt="product image"></a>
@@ -419,10 +426,11 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 								<!-- Start Single Product -->
-							</div>
-							<div class="single__product">
+                            </div>
+                            @endforeach
+							{{-- <div class="single__product">
 								<!-- Start Single Product -->
 								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 									<div class="product product__style--3">
@@ -741,7 +749,7 @@
 									</div>
 								</div>
 								<!-- Start Single Product -->
-							</div>
+							</div> --}}
 						</div>
 					</div>
 					<!-- End Single Tab Content -->
@@ -2388,8 +2396,8 @@
 					<div class="col-md-6 col-lg-4 col-sm-12">
 						<div class="post__itam">
 							<div class="content">
-								<h3><a href="blog-details.html">International activities of the Frankfurt Book </a></h3>
-								<p>We are proud to announce the very first the edition of the frankfurt news.We are proud to announce the very first of  edition of the fault frankfurt news for us.</p>
+								<h3><a href="/blog-details">تشخیص زبان اشاره با پایتون — راهنمای کاربردی </a></h3>
+								<p>در این مطلب، روش تشخیص زبان اشاره با پایتون مورد بررسی قرار گرفته است. برای درک بهتر موضوع، فرض می‌شود که فرد در یک زمین…</p>
 								<div class="post__time">
 									<span class="day">Dec 06, 18</span>
 									<div class="post-meta">

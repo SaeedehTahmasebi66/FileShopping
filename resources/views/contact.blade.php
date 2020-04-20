@@ -1,23 +1,6 @@
 ﻿@extends('layouts.mainmaster')
 @section('content')
-        <!-- Start Bradcaump area -->
-        <div class="ht__bradcaump__area bg-image--6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="bradcaump__inner text-center">
-                        	<h2 class="bradcaump-title">Contact Us</h2>
-                            <nav class="bradcaump-content">
-                              <a class="breadcrumb_item" href="index.html">Home</a>
-                              <span class="brd-separetor">/</span>
-                              <span class="breadcrumb_item active">Contact Us</span>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Bradcaump area -->
+
         <!-- Start Contact Area -->
         <section class="wn_contact_area bg--white pt--80 pb--80">
 			{{-- <div class="google__map pb--80">
@@ -33,25 +16,25 @@
         		<div class="row">
         			<div class="col-lg-8 col-12">
         				<div class="contact-form-wrap">
-        					<h2 class="contact__title">Get in touch</h2>
-        					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. </p>
+        					<h2 class="contact__title">ارتباط با ما</h2>
+        					<p>شما میتوانید با پر کردن فرم زیر با ما ارتباط برقرار کنید.</p>
                             <form id="contact-form" action="#" method="post">
                                 <div class="single-contact-form space-between">
-                                    <input type="text" name="firstname" placeholder="First Name*">
-                                    <input type="text" name="lastname" placeholder="Last Name*">
+                                    <input type="text" name="firstname" placeholder="نام*">
+                                    <input type="text" name="lastname" placeholder="نام خانوادگی*">
                                 </div>
                                 <div class="single-contact-form space-between">
-                                    <input type="email" name="email" placeholder="Email*">
-                                    <input type="text" name="website" placeholder="Website*">
+                                    <input type="email" name="email" placeholder="ایمیل*">
+                                    <input type="text" name="website" placeholder="وب سایت*">
                                 </div>
                                 <div class="single-contact-form">
-                                    <input type="text" name="subject" placeholder="Subject*">
+                                    <input type="text" name="subject" placeholder="موضوع*">
                                 </div>
                                 <div class="single-contact-form message">
-                                    <textarea name="message" placeholder="Type your message here.."></textarea>
+                                    <textarea name="message" placeholder="متن پیام خود را اینجا بنویسید..."></textarea>
                                 </div>
                                 <div class="contact-btn">
-                                    <button type="submit">Send Email</button>
+                                    <button type="submit">ارسال پیام</button>
                                 </div>
                             </form>
                         </div>
@@ -61,22 +44,22 @@
         			</div>
         			<div class="col-lg-4 col-12 md-mt-40 sm-mt-40">
         				<div class="wn__address">
-        					<h2 class="contact__title">Get office info.</h2>
-        					<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. </p>
+        					<h2 class="contact__title">اطلاعات دفتر مرکزی</h2>
+        					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
         					<div class="wn__addres__wreapper">
 
         						<div class="single__address">
         							<i class="icon-location-pin icons"></i>
         							<div class="content">
-        								<span>address:</span>
-        								<p>666 5th Ave New York, NY, United</p>
+        								<span>نشانی:</span>
+        								<p>خیابان کریم خان زند، نرسیده به میدان هفتم تیر، خردمند جنوبی، پلاک ۶۲</p>
         							</div>
         						</div>
 
         						<div class="single__address">
         							<i class="icon-phone icons"></i>
         							<div class="content">
-        								<span>Phone Number:</span>
+        								<span>شماره تماس:</span>
         								<p>716-298-1822</p>
         							</div>
         						</div>
@@ -84,7 +67,7 @@
         						<div class="single__address">
         							<i class="icon-envelope icons"></i>
         							<div class="content">
-        								<span>Email address:</span>
+        								<span>آدرس ایمیل:</span>
         								<p>716-298-1822</p>
         							</div>
         						</div>
@@ -92,7 +75,7 @@
         						<div class="single__address">
         							<i class="icon-globe icons"></i>
         							<div class="content">
-        								<span>website address:</span>
+        								<span>آدرس وب سایت:</span>
         								<p>716-298-1822</p>
         							</div>
         						</div>

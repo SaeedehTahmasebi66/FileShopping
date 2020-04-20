@@ -408,7 +408,7 @@
 		<div class="brown--color box-search-content search_active block-bg close__top">
 			<form id="search_mini_form" class="minisearch" action="#">
 				<div class="field__search">
-					<input type="text" placeholder="Search entire store here...">
+					<input type="text" placeholder="عنوان درس مورد نظر خود را وارد کرده و همین امروز شروع به آموختن کنید.">
 					<div class="action">
 						<a href="#"><i class="zmdi zmdi-search"></i></a>
 					</div>
@@ -418,4 +418,22 @@
 				<span>close</span>
 			</div>
 		</div>
-		<!-- End Search Popup -->
+        <!-- End Search Popup -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner">
+                            <h3 class="bradcaump-title">به آسانی یاد بگیرید</h3>
+                            <nav class="bradcaump-content">
+                                {{-- <a class="breadcrumb_item" href="/index">Home</a> --}}
+                                {{-- <span class="brd-separetor">/</span> --}}
+                                <span class="breadcrumb_item">بیش از هزاران کتاب و ویدئوی آموزشی </span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
