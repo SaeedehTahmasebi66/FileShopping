@@ -21,11 +21,11 @@
 									</ul>
 									<ul class="mainmenu d-flex justify-content-center">
 										{{-- <li><a href="index.html">Trending</a></li> --}}
-										<li><a href="index.html">پرفروش ترین ها</a></li>
-										<li><a href="index.html">همه محصولات</a></li>
-										<li><a href="index.html">علاقه مندی ها</a></li>
-										<li><a href="index.html">وبلاگ</a></li>
-										<li><a href="index.html">تماس با ما</a></li>
+										<li><a href="/best-seller">پرفروش ترین ها</a></li>
+										<li><a href="/shop-grid">همه محصولات</a></li>
+										<li><a href="/wishlist">علاقه مندی ها</a></li>
+										<li><a href="/blog">وبلاگ</a></li>
+										<li><a href="/contact">تماس با ما</a></li>
 									</ul>
 								</div>
 							</div>

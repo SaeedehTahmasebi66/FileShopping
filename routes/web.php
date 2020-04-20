@@ -26,6 +26,7 @@ Route::get('/index', 'ProductController@latestPopularProducts');
 
 Route::get('/about', function () {return view('about');});
 Route::get('/contact', function () {return view('contact');});
+Route::get('/blog', function () {return view('blog');});
 
 Route::get('/myaccount', function () {return view('my-account');})->name('myaccount');
 Route::get('/cart', function () {return view('cart');})->name('cart');
