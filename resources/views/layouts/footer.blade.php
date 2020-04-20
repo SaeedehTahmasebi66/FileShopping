@@ -6,7 +6,7 @@
 						<div class="col-lg-12">
 							<div class="footer__widget footer__menu">
 								<div class="ft__logo">
-									<a href="index.html">
+									<a href="/index">
 										<img src="{{asset('assets/images/logo/3.png')}}" alt="logo">
 									</a>
 									<p>صفحات رسمی <strong>ایزی لرنینگ</strong>  را در شبکه های اجتماعی دنبال کنید تا از جدیدترین آموزش ها مطلع شوید.</p>
