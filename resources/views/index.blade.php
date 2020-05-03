@@ -70,16 +70,16 @@
 							<div class="product__content content--center">
 								<h4><a href="/single-product/{{$product->id}}">{{$product->name}}</a></h4>
 								<ul class="prize d-flex">
-									<li>{{$product->price}} تومان</li>
-									<li class="old_prize">$35.00</li>
+									<li>{{number_format($product->price)}} تومان</li>
+									{{-- <li class="old_prize">$35.00</li> --}}
 								</ul>
 								<div class="action">
 									<div class="actions_inner">
 										<ul class="add_to_links">
-											<li><a class="cart" href="{{route('cart')}}"><i class="bi bi-shopping-bag4"></i></a></li>
-											<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-											<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-											<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+											<li><a class="cart addTCart" data="{{$product->id}}"><i>افزودن به سبد خرید</i></a></li>
+											<li><a class="wishlist" href="wishlist.html"><i>افزودن به علاقه مندی ها</i></a></li>
+											{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li> --}}
+											{{-- <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
 										</ul>
 									</div>
 								</div>
@@ -363,15 +363,15 @@
 											<h4><a href="/single-product/{{$p->id}}">{{$p->name}}</a></h4>
 											<ul class="prize d-flex">
 												<li>{{$p->price}} تومان</li>
-												<li class="old_prize">$35.00</li>
+												{{-- <li class="old_prize">$35.00</li> --}}
 											</ul>
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{route('cart')}}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+														<li><a class="cart addTCart" data="{{$p->id}}"><i>افزودن به سبد خرید</i></a></li>
+														<li><a class="wishlist" href="wishlist.html">افزودن به علاقه مندی ها<i></i></a></li>
+														{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li> --}}
+														{{-- <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
 													</ul>
 												</div>
 											</div>

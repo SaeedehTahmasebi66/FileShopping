@@ -579,4 +579,49 @@
 //   }
 
 
+/*====== add-to-cart ======*/
+$('.addTCart' ).click(function() {
+     var id = $(this).attr('data');
+    //  alert(id);
+    $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                }
+            });
+    $.ajax({
+            url: 'http://localhost:8000/add-to-cart',
+            type: 'POST',
+            data: 'product_id='+id,
+            success: function (data) {
+                // alert(data);
+                $('#myCart' ).html(data);
+
+            },
+        });
+});
+
+$(".remove-from-cart").click(function () {
+
+    var id = $(this).attr('data');
+    // alert(id);
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+        }
+    });
+
+    if(confirm("Are you sure?")) {
+        $.ajax({
+            url: 'http://localhost:8000/remove-from-cart',
+            method: "POST",
+            data: 'product_id='+id,
+            success: function (data) {
+                // alert(data);
+                $('#myCart').html(data);
+            }
+        });
+    }
+});
+
 })(jQuery);
+

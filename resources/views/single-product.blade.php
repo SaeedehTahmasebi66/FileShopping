@@ -45,7 +45,7 @@
         									<span>Qty</span>
         									<input id="qty" class="input-text qty" name="qty" min="1" value="1" title="Qty" type="number">
         									<div class="addtocart__actions">
-        										<button class="tocart" type="submit" title="Add to Cart">Add to Cart</button>
+        										<button data="{{$product['id']}}" class="tocart addTCart" type="submit" title="Add to Cart">افزودن به سبد خرید</button>
         									</div>
 											<div class="product-addto-links clearfix">
 												<a class="wishlist" href="#"></a>

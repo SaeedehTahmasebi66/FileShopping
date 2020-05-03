@@ -13,5 +13,6 @@
     </div>
     <!-- //Main wrapper -->
     @include('layouts.footer-scripts')
+    @yield('ajaxs')
 </body>
 </html>

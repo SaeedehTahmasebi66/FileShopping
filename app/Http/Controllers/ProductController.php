@@ -46,11 +46,47 @@ class ProductController extends Controller
     }
 
 
-    public function addToCart(){
+    public function addToCart(Request $request)
+    {
+        // return $request->product_id;
 
-        //showing number of shop at the button of cart in menu at the top
-        //write "add to your cart" instead of  "add to cart" : ajax ???
-
+        if ($request->session()->has('cart')){
+            $cart = session()->get('cart');
+            if ( array_key_exists($request->product_id, $cart) ) {
+                $cart[$request->product_id]++;
+            }else{
+                $cart[$request->product_id] = 1;
+            }
+            $request->session()->put('cart', $cart);
+        }else{
+            $cart = array();
+            $cart[$request->product_id] = 1;
+            $request->session()->put('cart', $cart);
+        }
+        // $value = session()->get('cart');
+        // var_dump($value);
+        return view('layouts.cart');
     }
+    public function remove(Request $request)
+    {
+        if($request->product_id) {
+
+            $cart = session()->get('cart');
+
+            if(isset($cart[$request->product_id])) {
+
+                unset($cart[$request->product_id]);
+
+                session()->put('cart', $cart);
+            }
+        }
+        return view('layouts.cart');
+    }
+
+    public function cart()
+    {
+        return view('cart');
+    }
+
 
 }

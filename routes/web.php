@@ -29,7 +29,7 @@ Route::get('/contact', function () {return view('contact');});
 Route::get('/blog', function () {return view('blog');});
 
 Route::get('/myaccount', function () {return view('my-account');})->name('myaccount');
-Route::get('/cart', function () {return view('cart');})->name('cart');
+
 Route::get('/wishlist', function () {return view('wishlist');})->name('wishlist');
 // Route::get('/shop-grid', function () {return view('shop-grid');})->name('shop-grid');
 Route::get('/shop-grid', 'ProductController@allProducts');
@@ -39,3 +39,8 @@ Route::get('/single-product/{id}', 'ProductController@singleProduct');
 Route::get('/blog-details', function () {return view('blog-details');})->name('blog-details');
 
 Route::get('/search', 'ProductController@searchProducts');
+
+//----------------------------------- Cart -----------------------------------------------
+Route::post('/add-to-cart', 'ProductController@addToCart')->name('add-to-cart');
+Route::post('/remove-from-cart', 'ProductController@remove');
+Route::get('/cart', 'ProductController@cart')->name('cart');
