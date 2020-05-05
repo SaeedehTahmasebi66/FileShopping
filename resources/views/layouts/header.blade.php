@@ -30,110 +30,6 @@
                                 </li>
                                 <li class="drop with--one--item"><a href="{{'/about'}}">درباره ما</a></li>
                                 <li class="drop with--one--item"><a href="{{'/contact'}}">تماس با ما</a></li>
-								{{-- <li class="drop"><a href="{{route('shop-grid')}}">نرم افزار</a>
-									<div class="megamenu mega03">
-										<ul class="item item03">
-											<li class="title">نرم افراز</li>
-											<li><a href="{{route('shop-grid')}}">آفیس</a></li>
-                                            <li><a href="{{route('shop-grid')}}">ابزار پی دی اف</a></li>
-                                            <li><a href="{{route('shop-grid')}}">ابزار دسکتاپ</a></li>
-											<li><a href="{{route('shop-grid')}}">ابزار رایت</a></li>
-											<li><a href="{{route('shop-grid')}}">ابزار ریستریج</a></li>
-                                            <li><a href="{{route('shop-grid')}}">ابزار سه بعدی سازی</a></li>
-                                            <li><a href="{{route('shop-grid')}}">ابزار فلش</a></li>
-											<li><a href="{{route('shop-grid')}}">بازیابی اطلاعات</a></li>
-											<li><a href="{{route('shop-grid')}}">برنامه نویسی</a></li>
-											<li><a href="{{route('shop-grid')}}">بهینه ساز ویندوز</li>
-										</ul>
-										<ul class="item item03">
-											<li class="title">اینترنت</li>
-											<li><a href="{{route('shop-grid')}}">مدیریت دانلود</a></li>
-											<li><a href="{{route('shop-grid')}}">ابزار اینترنت</a></li>
-											<li><a href="{{route('shop-grid')}}">مرورگر وب</a></li>
-											<li><a href="{{route('shop-grid')}}">کنترل از راه دور</a></li>
-											<li><a href="{{route('shop-grid')}}">مدیریت اف تی پی</a></li>
-                                            <li><a href="{{route('shop-grid')}}">ابزار شبکه</a></li>
-                                            <li><a href="{{route('shop-grid')}}">سرور</a></li>
-										</ul>
-										<ul class="item item03">
-											<li class="title">مالتی مدیا</li>
-											<li><a href="{{route('shop-grid')}}">پلیر موزیک و فیلم</a></li>
-											<li><a href="{{route('shop-grid')}}">نمایش فیلم</a></li>
-											<li><a href="{{route('shop-grid')}}">پخش صوت</a></li>
-											<li><a href="{{route('shop-grid')}}">ویرایشگر فیلم</a></li>
-                                            <li><a href="{{route('shop-grid')}}">ویرایشگر صوت</a></li>
-                                            <li><a href="{{route('shop-grid')}}">مبدل صوتی و تصویری</a></li>
-                                            <li><a href="{{route('shop-grid')}}">کدکهای صوتیو تصویری</a></li>
-                                            <li><a href="{{route('shop-grid')}}">تصویربرداری از دسکتاپ</a></li>
-                                        </ul>
-                                        <ul class="item item03">
-											<li class="title">امنیتی</li>
-											<li><a href="{{route('shop-grid')}}">ابزار امنیتی</a></li>
-                                            <li><a href="{{route('shop-grid')}}">آنتی ویروس</a></li>
-                                            <li><a href="{{route('shop-grid')}}">فایروال</a></li>
-                                            <li><a href="{{route('shop-grid')}}">ضدهک و جاسوسی</a></li>
-                                            <li><a href="{{route('shop-grid')}}">حذف و پاکسازی اطلاعات</a></li>
-
-										</ul>
-									</div>
-								</li>
-								<li class="drop"><a href="shop-grid.html">سیستم عامل</a>
-									<div class="megamenu mega03">
-										<ul class="item item03">
-											<li class="title">ویندوز</li>
-											<li><a href="{{route('shop-grid')}}">ویندوز 10</a></li>
-											<li><a href="{{route('shop-grid')}}">ویندوز 8.1</a></li>
-											<li><a href="{{route('shop-grid')}}">ویندوز 7</a></li>
-											<li><a href="{{route('shop-grid')}}">ویندوز xp</a></li>
-											<li><a href="{{route('shop-grid')}}">ویندوز Server</a></li>
-										</ul>
-										<ul class="item item03">
-											<li class="title">سایر سیستم عامل ها</li>
-											<li><a href="{{route('shop-grid')}}">لینوکس</a></li>
-											<li><a href="{{route('shop-grid')}}">مکینتاش</a></li>
-                                            <li><a href="{{route('shop-grid')}}">اندروید</a></li>
-                                        </ul>
-										<ul class="item item03">
-											<li class="title">سایر بخش ها</li>
-											<li><a href="{{route('shop-grid')}}"></a></li>
-											<li><a href="{{route('shop-grid')}}">مجازی سازی</a></li>
-											<li><a href="{{route('shop-grid')}}">آپدیت ویندوز</a></li>
-											<li><a href="{{route('shop-grid')}}">فعال سازی ویندوز و آفیس</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="drop"><a href="{{route('shop-grid')}}">موبایل</a>
-									<div class="megamenu mega02">
-										<ul class="item item02">
-											<li class="title">نرم افزار</li>
-											<li><a href="{{route('shop-grid')}}">برنامه های کاربردی</a></li>
-											<li><a href="{{route('shop-grid')}}">مدیریت اپلیکیشن ها</a></li>
-											<li><a href="{{route('shop-grid')}}"></a></li>
-											<li><a href="{{route('shop-grid')}}">مدیریت ایمیل</a></li>
-                                            <li><a href="{{route('shop-grid')}}">مدیریت فایل</a></li>
-                                            <li><a href="{{route('shop-grid')}}">پلیر موزیک و فیلم</a></li>
-
-										</ul>
-										<ul class="item item02">
-											<li class="title">بازی</li>
-											<li><a href="{{route('shop-grid')}}">اکشن</a></li>
-											<li><a href="{{route('shop-grid')}}">ماجراجویی</a></li>
-											<li><a href="{{route('shop-grid')}}">سرگرمی</a></li>
-											<li><a href="{{route('shop-grid')}}">ورزشی</a></li>
-											<li><a href="{{route('shop-grid')}}">موزیکال</a></li>
-										</ul>
-									</div>
-								</li> --}}
-
-								{{-- <li class="drop"><a href="blog.html">Blog</a>
-									<div class="megamenu dropdown">
-										<ul class="item item01">
-											<li><a href="blog.html">Blog Page</a></li>
-											<li><a href="blog-details.html">Blog Details</a></li>
-										</ul>
-									</div>
-								</li> --}}
-								{{-- <li><a href="contact.html">Contact</a></li> --}}
 							</ul>
 						</nav>
 					</div>
@@ -332,14 +228,14 @@
 		<div class="brown--color box-search-content search_active block-bg close__top">
 			<form id="search_mini_form" class="minisearch" action="/search" method="GET">
 				<div class="field__search">
-					<input name="search" type="text" placeholder="عنوان درس مورد نظر خود را وارد کرده و همین امروز شروع به آموختن کنید.">
+					<input name="search" type="text" placeholder="عنوان درس مورد نظر خود را وارد کرده و همین امروز شروع به آموختن کنید...">
 					<div class="action">
-						<a href="#"><i class="zmdi zmdi-search"></i></a>
+						<a><i class="zmdi zmdi-search"></i></a>
 					</div>
 				</div>
 			</form>
 			<div class="close__wrap">
-				<span>close</span>
+				<span>بستن</span>
 			</div>
 		</div>
         <!-- End Search Popup -->

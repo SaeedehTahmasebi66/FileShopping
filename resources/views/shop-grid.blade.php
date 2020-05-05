@@ -8,28 +8,16 @@
         			<div class="col-lg-3 col-12 order-2 order-lg-1 md-mt-40 sm-mt-40">
         				<div class="shop__sidebar">
         					<aside class="wedget__categories poroduct--cat">
-        						<h3 class="wedget__title">Product Categories</h3>
+        						<h3 class="wedget__title">دسته بندی محصولات</h3>
         						<ul>
-        							<li><a href="#">Biography <span>(3)</span></a></li>
-        							<li><a href="#">Business <span>(4)</span></a></li>
-        							<li><a href="#">Cookbooks <span>(6)</span></a></li>
-        							<li><a href="#">Health & Fitness <span>(7)</span></a></li>
-        							<li><a href="#">History <span>(8)</span></a></li>
-        							<li><a href="#">Mystery <span>(9)</span></a></li>
-        							<li><a href="#">Inspiration <span>(13)</span></a></li>
-        							<li><a href="#">Romance <span>(20)</span></a></li>
-        							<li><a href="#">Fiction/Fantasy <span>(22)</span></a></li>
-        							<li><a href="#">Self-Improvement <span>(13)</span></a></li>
-        							<li><a href="#">Humor Books <span>(17)</span></a></li>
-        							<li><a href="#">Harry Potter <span>(20)</span></a></li>
-        							<li><a href="#">Land of Stories <span>(34)</span></a></li>
-        							<li><a href="#">Kids' Music <span>(60)</span></a></li>
-        							<li><a href="#">Toys & Games <span>(3)</span></a></li>
-        							<li><a href="#">hoodies <span>(3)</span></a></li>
+                                    {{-- <li><a href="{{'/category/1'}}">برنامه نویسی <span>(3)</span></a></li> --}}
+        							<li><a href="{{'/category/1'}}"> برنامه نویسی </a></li>
+        							<li><a href="{{'/category/2'}}"> علوم و مهندسی کامپیوتر </a></li>
+        							<li><a href="{{'/category/3'}}"> هوش مصنوعی </a></li>
         						</ul>
         					</aside>
         					<aside class="wedget__categories pro--range">
-        						<h3 class="wedget__title">Filter by price</h3>
+        						<h3 class="wedget__title">فیلتر بر اساس قیمت</h3>
         						<div class="content-shopby">
         						    <div class="price_filter s-filter clear">
         						        <form action="#" method="GET">
@@ -37,10 +25,10 @@
         						            <div class="slider__range--output">
         						                <div class="price__output--wrap">
         						                    <div class="price--output">
-        						                        <span>Price :</span><input type="text" id="amount" readonly="">
+        						                        <span>قیمت :</span><input type="text" id="amount" readonly="">
         						                    </div>
         						                    <div class="price--filter">
-        						                        <a href="#">Filter</a>
+        						                        <a href="#">فیلتر</a>
         						                    </div>
         						                </div>
         						            </div>
@@ -49,30 +37,22 @@
         						</div>
         					</aside>
         					<aside class="wedget__categories poroduct--tag">
-        						<h3 class="wedget__title">Product Tags</h3>
+        						<h3 class="wedget__title">برچسب محصولات</h3>
         						<ul>
-        							<li><a href="#">Biography</a></li>
-        							<li><a href="#">Business</a></li>
-        							<li><a href="#">Cookbooks</a></li>
-        							<li><a href="#">Health & Fitness</a></li>
-        							<li><a href="#">History</a></li>
-        							<li><a href="#">Mystery</a></li>
-        							<li><a href="#">Inspiration</a></li>
-        							<li><a href="#">Religion</a></li>
-        							<li><a href="#">Fiction</a></li>
-        							<li><a href="#">Fantasy</a></li>
-        							<li><a href="#">Music</a></li>
-        							<li><a href="#">Toys</a></li>
-        							<li><a href="#">Hoodies</a></li>
+                                    <li><a href="#">برنامه نویسی</a></li>
+        							<li><a href="#">مبانی برنامه نویسی</a></li>
+                                    <li><a href="#">برنامه نویسی وب</a></li>
+                                    <li><a href="#">برنامه نویسی موبایل</a></li>
+        							<li><a href="#">هوش مصنوعی</a></li>
         						</ul>
         					</aside>
-        					<aside class="wedget__categories sidebar--banner">
+        					{{-- <aside class="wedget__categories sidebar--banner">
 								<img src="{{asset('assets/images/others/banner_left.jpg')}}" alt="banner images">
 								<div class="text">
 									<h2>new products</h2>
 									<h6>save up to <br> <strong>40%</strong>off</h6>
 								</div>
-        					</aside>
+        					</aside> --}}
         				</div>
         			</div>
         			<div class="col-lg-9 col-12 order-1 order-lg-2">
@@ -83,16 +63,14 @@
 			                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-grid" role="tab"><i class="fa fa-th"></i></a>
 			                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-list" role="tab"><i class="fa fa-list"></i></a>
 			                        </div>
-			                        <p>Showing 1–12 of 40 results</p>
+			                        <p>نمایش {{$resultNumber}} نتیجه</p>
 			                        <div class="orderby__wrapper">
-			                        	<span>Sort By</span>
+			                        	<span>مرتب شده بر اساس</span>
 			                        	<select class="shot__byselect">
-			                        		<option>Default sorting</option>
-			                        		<option>HeadPhone</option>
-			                        		<option>Furniture</option>
-			                        		<option>Jewellery</option>
-			                        		<option>Handmade</option>
-			                        		<option>Kids</option>
+			                        		<option>مرتب سازی پیش فرض</option>
+			                        		<option>جدیدترین ها</option>
+			                        		<option>محبوب ترین ها</option>
+			                        		<option>پرفروش ترین ها</option>
 			                        	</select>
 			                        </div>
 		                        </div>
@@ -116,16 +94,16 @@
 										<div class="product__content content--center">
 											<h4><a class="js-click-product" href="/single-product/{{$product->id}}">{{$product->name}}</a></h4>
 											<ul class="prize d-flex">
-												<li>{{$product->price}} تومان</li>
-												<li class="old_prize">$35.00</li>
+												<li>{{number_format($product->price)}} تومان</li>
+												{{-- <li class="old_prize">$35.00</li> --}}
 											</ul>
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{'/cart'}}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{'/wishlist'}}"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+														<li><a class="cart addTCart" data="{{$product->id}}"><i>افزودن به سبد خرید</i></a></li>
+														<li><a class="wishlist" href="{{'/wishlist'}}"><i>افزودن به علاقه مندی ها</i></a></li>
+														{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li> --}}
+														{{-- <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
 													</ul>
 												</div>
 											</div>
@@ -580,14 +558,14 @@
 	        									<li><i class="fa fa-star-o"></i></li>
 	        								</ul>
 	        								<ul class="prize__box">
-	        									<li>{{$product->price}} تومان</li>
-	        									<li class="old__prize">$220.00</li>
+	        									<li>{{number_format($product->price)}} تومان</li>
+	        									{{-- <li class="old__prize">$220.00</li> --}}
 	        								</ul>
 	        								<p>{{$product->description}}</p>
 	        								<ul class="cart__action d-flex">
-	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
-	        									<li class="wishlist"><a href="cart.html"></a></li>
-	        									<li class="compare"><a href="cart.html"></a></li>
+	        									<li class="cart"><a class="addTCart" data="{{$product->id}}">افزودن به سبد خرید</a></li>
+	        									{{-- <li class="wishlist"><a href="cart.html"></a></li>
+	        									<li class="compare"><a href="cart.html"></a></li> --}}
 	        								</ul>
 
 	        							</div>

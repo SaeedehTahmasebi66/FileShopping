@@ -5,7 +5,7 @@
         <?php $price=0; ?>
         <!-- cart-main-area start -->
         <div class="cart-main-area section-padding--lg bg--white">
-            <div class="container">
+            <div class="container" style="width:80%">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 ol-lg-12">
                         <form action="#">
@@ -26,9 +26,9 @@
                                         <?php $product = Product::find($k); ?>
                                         <tr>
                                             @foreach($product->Image()->get() as $Img)
-                                            <td class="product-thumbnail"><a href="#"><img src="{{asset('/') . $Img->path}}" alt="product img"></a></td>
+                                            <td class="product-thumbnail"><a href="/single-product/{{$product->id}}"><img src="{{asset('/') . $Img->path}}" alt="product img"></a></td>
                                             @endforeach
-                                            <td class="product-name"><a href="#">{{$product->name}}</a></td>
+                                            <td class="product-name"><a href="/single-product/{{$product->id}}">{{$product->name}}</a></td>
                                             <td class="product-price"><span class="amount">{{number_format($product->price)}} تومان</span></td>
                                             {{-- <td class="product-quantity">20000 تومان</td>
                                             <td class="product-subtotal">35000 تومان</td> --}}
@@ -40,14 +40,7 @@
                                 </table>
                             </div>
                         </form>
-                        {{-- <div class="cartbox__btn">
-                            <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
-                                <li><a href="#">Coupon Code</a></li>
-                                <li><a href="#">Apply Code</a></li>
-                                <li><a href="#">Update Cart</a></li>
-                                <li><a href="#">Check Out</a></li>
-                            </ul>
-                        </div> --}}
+
                     </div>
                 </div>
                 <div class="row">
@@ -67,8 +60,17 @@
                                 <span>مبلغ قابل پرداخت</span>
                                 <span>{{number_format($price)}} تومان</span>
                             </div>
+                            <div class="cartbox__btn">
+                                <ul class="cart__btn__list ">
+                                    {{-- <li><a href="#">Coupon Code</a></li> --}}
+                                    {{-- <li><a href="#">Apply Code</a></li> --}}
+                                    {{-- <li><a href="#">Update Cart</a></li> --}}
+                                    <li><a href="#" style="text-align:center">ثبت سفارش</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

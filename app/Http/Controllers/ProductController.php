@@ -7,42 +7,37 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
+    public function index(){
+
+        $newestproducts = Product::orderBy('created_at','desc')->take(6)->get();
+        $popularProducts = Product::orderBy('clicks','desc')->take(6)->get();
+        return view('index',compact('newestproducts','popularProducts'));
+    }
+
     public function allProducts(){
 
         $products = Product::all();
-        return view('shop-grid',compact('products'));
+        $resultNumber = $products->count();
+        return view('shop-grid',compact('products','resultNumber'));
     }
 
     public function singleProduct($id){
 
         $product = Product::findOrFail($id);
-        // $product->increment('clicks'); // Increment the value in the clicks column.
-        // $product->update(); // Save our updated product.
+        $product->increment('clicks');  // Increment the value in the clicks column.
         return view('single-product',compact('product'));
     }
-
-    public function latestPopularProducts(){
-
-        $products = Product::orderBy('created_at','desc')->take(6)->get();
-        $popularProducts = Product::orderBy('clicks','desc')->take(6)->get();
-        return view('index',compact('products','popularProducts'));
-    }
-
-    // public function popularProducts(){
-
-    //     $popularProducts = Product::orderBy('clicks','desc')->take(2)->get();
-    //     return view('shop-grid',compact('popularProducts'));
-    // }
 
 
     public function searchProducts(Request $request){
 
         $term = $request->post('search');
         $products = Product::whereHas('category', function($query) use($term) {
-            $query->where('name', 'like', '%'.$term.'%');
-        })->orWhere('name','LIKE','%'.$term.'%')->orderBy('name', 'asc')->get();
-
-        return view('shop-grid',compact('products'));
+                    $query->where('name', 'LIKE', "%$term%");
+                    })->orWhere('name','LIKE',"%$term%")
+                    ->orderBy('name','asc')->get();
+        $resultNumber = $products->count();
+        return view('shop-grid',compact('products','resultNumber'));
     }
 
 

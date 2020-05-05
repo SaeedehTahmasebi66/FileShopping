@@ -12,15 +12,8 @@ class CategoryController extends Controller
 
         $category = Category::findOrFail($id);
         $products = $category->product;
-        return view('shop-grid',compact('products'));
+        $resultNumber = $products->count();
+        return view('shop-grid',compact('products','resultNumber'));
 
-        // $comments = App\Post::find(1)->comments;
-        // foreach ($comments as $comment) {
-        //     //
-        // }
-
-        
-         // $products = Product::where('category_id',$id);
-        // return view('shop-grid',compact('products'));
     }
 }

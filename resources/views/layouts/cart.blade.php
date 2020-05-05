@@ -18,11 +18,11 @@
                     <div class="item01 d-flex mt--20">
                         <div class="thumb">
                             @foreach($product->Image()->get() as $Img)
-                            <a href="product-details.html"><img src="{{asset('/') . $Img->path}}" alt="product images"></a>
+                            <a href="/single-product/{{$product->id}}"><img src="{{asset('/') . $Img->path}}" alt="product images"></a>
                             @endforeach
                         </div>
                         <div class="content">
-                            <h6><a href="product-details.html">{{$product->name}}</a></h6>
+                            <h6><a href="/single-product/{{$product->id}}">{{$product->name}}</a></h6>
                             <div class="product_prize d-flex justify-content-between">
                                 <ul class="d-flex justify-content-end">
                                     <li><span class="prize">{{number_format($product->price)}} تومان</span></li>
@@ -43,7 +43,7 @@
                 <span>{{number_format($price)}} تومان</span>
             </div>
             <div class="mini_action checkout">
-                <a class="checkout__btn" href="{{route('cart')}}">ثبت سفارش</a>
+                <a class="checkout__btn" href="#">ثبت سفارش</a>
             </div>
             <div class="mini_action cart">
                 <a class="cart__btn" href="{{route('cart')}}">مشاهده سبد خرید</a>

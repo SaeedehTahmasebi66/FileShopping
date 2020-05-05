@@ -11,14 +11,16 @@
         						<div class="col-lg-6 col-12">
         							<div class="wn__fotorama__wrapper">
 	        							<div class="fotorama wn__fotorama__action" data-nav="thumbs">
-		        							  <a href="1.jpg"><img src="{{asset('assets/images/product/1.jpg')}}" alt=""></a>
-		        							  <a href="2.jpg"><img src="{{asset('assets/images/product/2.jpg')}}" alt=""></a>
+                                            @foreach($product->Image()->get() as $Img)
+                                            <a href="1.jpg"><img src="{{asset('/') . $Img->path}}" alt=""></a>
+                                            @endforeach
+		        							  {{-- <a href="2.jpg"><img src="{{asset('assets/images/product/2.jpg')}}" alt=""></a>
 		        							  <a href="3.jpg"><img src="{{asset('assets/images/product/3.jpg')}}" alt=""></a>
 		        							  <a href="4.jpg"><img src="{{asset('assets/images/product/4.jpg')}}" alt=""></a>
 		        							  <a href="5.jpg"><img src="{{asset('assets/images/product/5.jpg')}}" alt=""></a>
 		        							  <a href="6.jpg"><img src="{{asset('assets/images/product/6.jpg')}}" alt=""></a>
 		        							  <a href="7.jpg"><img src="{{asset('assets/images/product/7.jpg')}}" alt=""></a>
-		        							  <a href="8.jpg"><img src="{{asset('assets/images/product/8.jpg')}}" alt=""></a>
+		        							  <a href="8.jpg"><img src="{{asset('assets/images/product/8.jpg')}}" alt=""></a> --}}
 	        							</div>
         							</div>
         						</div>
@@ -35,24 +37,24 @@
         									</ul>
         								</div>
         								<div class="price-box">
-        									<span>{{$product['price']}} تومان</span>
+        									<span>{{number_format($product['price'])}} تومان</span>
         								</div>
 										<div class="product__overview">
         									<p>{{$product['description']}}</p>
         									<p> </p>
         								</div>
         								<div class="box-tocart d-flex">
-        									<span>Qty</span>
-        									<input id="qty" class="input-text qty" name="qty" min="1" value="1" title="Qty" type="number">
+        									{{-- <span>Qty</span> --}}
+        									{{-- <input id="qty" class="input-text qty" name="qty" min="1" value="1" title="Qty" type="number"> --}}
         									<div class="addtocart__actions">
         										<button data="{{$product['id']}}" class="tocart addTCart" type="submit" title="Add to Cart">افزودن به سبد خرید</button>
         									</div>
-											<div class="product-addto-links clearfix">
+											{{-- <div class="product-addto-links clearfix">
 												<a class="wishlist" href="#"></a>
 												<a class="compare" href="#"></a>
-											</div>
+											</div> --}}
         								</div>
-										<div class="product_meta">
+										{{-- <div class="product_meta">
 											<span class="posted_in">Categories:
 												<a href="#">Adventure</a>,
 												<a href="#">Kids' Music </a>
@@ -82,12 +84,12 @@
 													</a>
 												</li>
 											</ul>
-										</div>
+										</div> --}}
                                     </div>
         						</div>
         					</div>
         				</div>
-        				<div class="product__info__detailed">
+        				{{-- <div class="product__info__detailed">
 							<div class="pro_details_nav nav justify-content-start" role="tablist">
 	                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-details" role="tab">Details</a>
 	                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-review" role="tab">Reviews</a>
@@ -209,10 +211,10 @@
 	                        	</div>
 	                        	<!-- End Single Tab Content -->
 	                        </div>
-        				</div>
-						<div class="wn__related__product pt--80 pb--50">
+        				</div> --}}
+						<div class="wn__related__product pt--100 pb--50">
 							<div class="section__title text-center">
-								<h2 class="title__be--2">Related Products</h2>
+								<h2 class="title__be--2">آموزش های مرتبط</h2>
 							</div>
 							<div class="row mt--60">
 								<div class="productcategory__slide--2 arrows_style owl-carousel owl-theme">
@@ -221,23 +223,23 @@
 										<div class="product__thumb">
 											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/1.jpg')}}" alt="product image"></a>
 											<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/2.jpg')}}" alt="product image"></a>
-											<div class="hot__box">
+											{{-- <div class="hot__box">
 												<span class="hot-label">BEST SALLER</span>
-											</div>
+											</div> --}}
 										</div>
 										<div class="product__content content--center">
 											<h4><a href="{{'/single-product'}}">robin parrish</a></h4>
 											<ul class="prize d-flex">
 												<li>$35.00</li>
-												<li class="old_prize">$35.00</li>
+												{{-- <li class="old_prize">$35.00</li> --}}
 											</ul>
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+                                                        <li><a class="cart addTCart" data="{{$product->id}}"><i>افزودن به سبد خرید</i></a></li>
+														<li><a class="wishlist" href="{{'/wishlist'}}"><i>افزودن به علاقه مندی ها</i></a></li>
+														{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
+														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
 													</ul>
 												</div>
 											</div>
@@ -254,7 +256,7 @@
 									</div>
 									<!-- Start Single Product -->
 									<!-- Start Single Product -->
-									<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
+									{{-- <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 										<div class="product__thumb">
 											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/3.jpg')}}" alt="product image"></a>
 											<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/4.jpg')}}" alt="product image"></a>
@@ -436,14 +438,14 @@
 												</ul>
 											</div>
 										</div>
-									</div>
+									</div> --}}
 									<!-- Start Single Product -->
 								</div>
 							</div>
 						</div>
 						<div class="wn__related__product">
 							<div class="section__title text-center">
-								<h2 class="title__be--2">upsell products</h2>
+								<h2 class="title__be--2">آموزش های پرفروش</h2>
 							</div>
 							<div class="row mt--60">
 								<div class="productcategory__slide--2 arrows_style owl-carousel owl-theme">
@@ -452,23 +454,23 @@
 										<div class="product__thumb">
 											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/1.jpg')}}" alt="product image"></a>
 											<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/2.jpg')}}" alt="product image"></a>
-											<div class="hot__box">
+											{{-- <div class="hot__box">
 												<span class="hot-label">BEST SALLER</span>
-											</div>
+											</div> --}}
 										</div>
 										<div class="product__content content--center">
 											<h4><a href="{{'/single-product'}}">robin parrish</a></h4>
 											<ul class="prize d-flex">
 												<li>$35.00</li>
-												<li class="old_prize">$35.00</li>
+												{{-- <li class="old_prize">$35.00</li> --}}
 											</ul>
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+                                                        <li><a class="cart addTCart" data="{{$product->id}}"><i>افزودن به سبد خرید</i></a></li>
+														<li><a class="wishlist" href="{{'/wishlist'}}"><i>افزودن به علاقه مندی ها</i></a></li>
+														{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
+														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
 													</ul>
 												</div>
 											</div>
@@ -485,7 +487,7 @@
 									</div>
 									<!-- Start Single Product -->
 									<!-- Start Single Product -->
-									<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
+									{{-- <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 										<div class="product__thumb">
 											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/3.jpg')}}" alt="product image"></a>
 											<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/4.jpg')}}" alt="product image"></a>
@@ -667,7 +669,7 @@
 												</ul>
 											</div>
 										</div>
-									</div>
+									</div> --}}
 									<!-- Start Single Product -->
 								</div>
 							</div>
@@ -676,28 +678,16 @@
         			<div class="col-lg-3 col-12 md-mt-40 sm-mt-40">
         				<div class="shop__sidebar">
         					<aside class="wedget__categories poroduct--cat">
-        						<h3 class="wedget__title">Product Categories</h3>
+        						<h3 class="wedget__title">دسته بندی محصولات</h3>
         						<ul>
-        							<li><a href="#">Biography <span>(3)</span></a></li>
-        							<li><a href="#">Business <span>(4)</span></a></li>
-        							<li><a href="#">Cookbooks <span>(6)</span></a></li>
-        							<li><a href="#">Health & Fitness <span>(7)</span></a></li>
-        							<li><a href="#">History <span>(8)</span></a></li>
-        							<li><a href="#">Mystery <span>(9)</span></a></li>
-        							<li><a href="#">Inspiration <span>(13)</span></a></li>
-        							<li><a href="#">Romance <span>(20)</span></a></li>
-        							<li><a href="#">Fiction/Fantasy <span>(22)</span></a></li>
-        							<li><a href="#">Self-Improvement <span>(13)</span></a></li>
-        							<li><a href="#">Humor Books <span>(17)</span></a></li>
-        							<li><a href="#">Harry Potter <span>(20)</span></a></li>
-        							<li><a href="#">Land of Stories <span>(34)</span></a></li>
-        							<li><a href="#">Kids' Music <span>(60)</span></a></li>
-        							<li><a href="#">Toys & Games <span>(3)</span></a></li>
-        							<li><a href="#">hoodies <span>(3)</span></a></li>
+                                    {{-- <li><a href="{{'/category/1'}}">برنامه نویسی <span>(3)</span></a></li> --}}
+        							<li><a href="{{'/category/1'}}">برنامه نویسی </a></li>
+        							<li><a href="{{'/category/2'}}">علوم و مهندسی کامپیوتر </a></li>
+        							<li><a href="{{'/category/3'}}">هوش مصنوعی </a></li>
         						</ul>
         					</aside>
         					<aside class="wedget__categories pro--range">
-        						<h3 class="wedget__title">Filter by price</h3>
+        						<h3 class="wedget__title">فیلتر بر اساس قیمت</h3>
         						<div class="content-shopby">
         						    <div class="price_filter s-filter clear">
         						        <form action="#" method="GET">
@@ -705,10 +695,10 @@
         						            <div class="slider__range--output">
         						                <div class="price__output--wrap">
         						                    <div class="price--output">
-        						                        <span>Price :</span><input type="text" id="amount" readonly="">
+        						                        <span>قیمت:</span><input type="text" id="amount" readonly="">
         						                    </div>
         						                    <div class="price--filter">
-        						                        <a href="#">Filter</a>
+        						                        <a href="#">فیلتر</a>
         						                    </div>
         						                </div>
         						            </div>
@@ -716,60 +706,37 @@
         						    </div>
         						</div>
         					</aside>
-        					<aside class="wedget__categories poroduct--compare">
+        					{{-- <aside class="wedget__categories poroduct--compare">
         						<h3 class="wedget__title">Compare</h3>
         						<ul>
         							<li><a href="#">x</a><a href="#">Condimentum posuere</a></li>
         							<li><a href="#">x</a><a href="#">Condimentum posuere</a></li>
         							<li><a href="#">x</a><a href="#">Dignissim venenatis</a></li>
         						</ul>
-        					</aside>
+        					</aside> --}}
         					<aside class="wedget__categories poroduct--tag">
-        						<h3 class="wedget__title">Product Tags</h3>
+        						<h3 class="wedget__title">برچسب محصولات</h3>
         						<ul>
-        							<li><a href="#">Biography</a></li>
-        							<li><a href="#">Business</a></li>
-        							<li><a href="#">Cookbooks</a></li>
-        							<li><a href="#">Health & Fitness</a></li>
-        							<li><a href="#">History</a></li>
-        							<li><a href="#">Mystery</a></li>
-        							<li><a href="#">Inspiration</a></li>
-        							<li><a href="#">Religion</a></li>
-        							<li><a href="#">Fiction</a></li>
-        							<li><a href="#">Fantasy</a></li>
-        							<li><a href="#">Music</a></li>
-        							<li><a href="#">Toys</a></li>
-        							<li><a href="#">Hoodies</a></li>
+                                    <li><a href="#">برنامه نویسی</a></li>
+        							<li><a href="#">مبانی برنامه نویسی</a></li>
+                                    <li><a href="#">برنامه نویسی وب</a></li>
+                                    <li><a href="#">برنامه نویسی موبایل</a></li>
+        							<li><a href="#">هوش مصنوعی</a></li>
         						</ul>
         					</aside>
-        					<aside class="wedget__categories sidebar--banner">
+        					{{-- <aside class="wedget__categories sidebar--banner">
 								<img src="{{asset('assets/images/others/banner_left.jpg')}}" alt="banner images">
 								<div class="text">
 									<h2>new products</h2>
 									<h6>save up to <br> <strong>40%</strong>off</h6>
 								</div>
-        					</aside>
+        					</aside> --}}
         				</div>
         			</div>
         		</div>
         	</div>
         </div>
         <!-- End main Content -->
-		<!-- Start Search Popup -->
-		<div class="box-search-content search_active block-bg close__top">
-			<form id="search_mini_form--2" class="minisearch" action="#">
-				<div class="field__search">
-					<input type="text" placeholder="Search entire store here...">
-					<div class="action">
-						<a href="#"><i class="zmdi zmdi-search"></i></a>
-					</div>
-				</div>
-			</form>
-			<div class="close__wrap">
-				<span>close</span>
-			</div>
-		</div>
-		<!-- End Search Popup -->
 @stop
 @section('quickview-product')
 		<!-- QUICKVIEW PRODUCT -->

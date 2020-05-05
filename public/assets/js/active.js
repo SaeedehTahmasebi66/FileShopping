@@ -553,32 +553,6 @@
 
 
 
-/*====== count clicks on single-product ======*/
-// $( '.js-click-product' ).click(function(e) {
-//     e.preventDefault; // Prevent the default behavior of the  element.
-//     var product = $(this).closest('.product'); // Find the parent .product element
-//     var productId = product.attr('data-product-id'); // Get the product ID from our data attribute
-//     registerProductClick(productId); // Pass that ID to our function.
-//   });
-
-//   function registerProductClick(productId) {
-//     $.ajaxSetup({
-//         headers: {
-//             'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-//         }
-//     })
-//     $.ajax({
-//       type: 'post',
-//       dataType: 'JSON',
-//       url: '/single-product/' + productId ,
-//       error: function (xhr, ajaxOptions, thrownError) {
-//              console.log(xhr.status);
-//              console.log(JSON.stringify(xhr.responseText));
-//          }
-//     });
-//   }
-
-
 /*====== add-to-cart ======*/
 $('.addTCart' ).click(function() {
      var id = $(this).attr('data');
