@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -23,9 +24,16 @@ class ProductController extends Controller
 
     public function singleProduct($id){
 
+        //find the product
         $product = Product::findOrFail($id);
-        $product->increment('clicks');  // Increment the value in the clicks column.
-        return view('single-product',compact('product'));
+
+        //incremant the clicks on the product
+        // $product->increment('clicks');  // Increment the value in the clicks column
+
+        //finding related products
+        $relatedProducts = Product::where('category_id',$product['category_id'])->get();
+
+        return view('single-product',compact('product','relatedProducts'));
     }
 
 

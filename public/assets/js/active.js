@@ -206,7 +206,7 @@
 
 /*=============  Produst Activation  ==========*/
     $('.productcategory__slide--2').owlCarousel({
-        loop:true,
+        loop:false,
         rtl:true,
         margin:0,
         nav:true,

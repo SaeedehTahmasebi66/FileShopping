@@ -218,25 +218,27 @@
 							</div>
 							<div class="row mt--60">
 								<div class="productcategory__slide--2 arrows_style owl-carousel owl-theme">
-									<!-- Start Single Product -->
+                                    <!-- Start Single Product -->
+                                    @foreach ($relatedProducts as $rProducts )
 									<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 										<div class="product__thumb">
-											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/1.jpg')}}" alt="product image"></a>
-											<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/2.jpg')}}" alt="product image"></a>
-											{{-- <div class="hot__box">
+                                            @foreach($rProducts->Image()->get() as $Img)
+                                            <a class="first__img" href="/single-product/{{$rProducts->id}}"><img src="{{asset('/') . $Img->path}}" alt="product image"></a>
+                                            @endforeach
+                                            {{-- <div class="hot__box">
 												<span class="hot-label">BEST SALLER</span>
 											</div> --}}
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="{{'/single-product'}}">robin parrish</a></h4>
+											<h4><a href="{{'/single-product'}}">{{$rProducts->name}}</a></h4>
 											<ul class="prize d-flex">
-												<li>$35.00</li>
+												<li>{{$rProducts->price}}</li>
 												{{-- <li class="old_prize">$35.00</li> --}}
 											</ul>
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-                                                        <li><a class="cart addTCart" data="{{$product->id}}"><i>افزودن به سبد خرید</i></a></li>
+                                                        <li><a class="cart addTCart" data="{{$rProducts->id}}"><i>افزودن به سبد خرید</i></a></li>
 														<li><a class="wishlist" href="{{'/wishlist'}}"><i>افزودن به علاقه مندی ها</i></a></li>
 														{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
@@ -253,7 +255,8 @@
 												</ul>
 											</div>
 										</div>
-									</div>
+                                    </div>
+                                    @endforeach
 									<!-- Start Single Product -->
 									<!-- Start Single Product -->
 									{{-- <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -487,7 +490,7 @@
 									</div>
 									<!-- Start Single Product -->
 									<!-- Start Single Product -->
-									{{-- <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
+									<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 										<div class="product__thumb">
 											<a class="first__img" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/3.jpg')}}" alt="product image"></a>
 											<a class="second__img animation1" href="{{'/single-product'}}"><img src="{{asset('assets/images/books/4.jpg')}}" alt="product image"></a>
@@ -669,7 +672,7 @@
 												</ul>
 											</div>
 										</div>
-									</div> --}}
+									</div>
 									<!-- Start Single Product -->
 								</div>
 							</div>
@@ -717,7 +720,6 @@
         					<aside class="wedget__categories poroduct--tag">
         						<h3 class="wedget__title">برچسب محصولات</h3>
         						<ul>
-                                    <li><a href="#">برنامه نویسی</a></li>
         							<li><a href="#">مبانی برنامه نویسی</a></li>
                                     <li><a href="#">برنامه نویسی وب</a></li>
                                     <li><a href="#">برنامه نویسی موبایل</a></li>

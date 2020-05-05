@@ -39,7 +39,6 @@
         					<aside class="wedget__categories poroduct--tag">
         						<h3 class="wedget__title">برچسب محصولات</h3>
         						<ul>
-                                    <li><a href="#">برنامه نویسی</a></li>
         							<li><a href="#">مبانی برنامه نویسی</a></li>
                                     <li><a href="#">برنامه نویسی وب</a></li>
                                     <li><a href="#">برنامه نویسی موبایل</a></li>
