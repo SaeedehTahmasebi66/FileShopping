@@ -6252,6 +6252,9 @@ section.wn_contact_area {
 	width: calc(100%);
 	left: 0;
 }
+#single-pic{
+    margin-top: 0px;
+}
 }
 
 @media only screen and (max-width: 767px) {
@@ -6273,6 +6276,9 @@ section.wn_contact_area {
 
 .remove-from-cart, .addTCart{
     cursor: pointer;
+}
+#single-pic{
+    margin-top: 160px;
 }
 /* .cart-main-area{
     padding: 80px 160px;

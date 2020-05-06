@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    //
+    public function Product()
+    {
+        return $this->morphedByMany("App\Models\Product","taggable");
+    }
 }

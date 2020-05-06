@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\Tag;
 
 class CategoryController extends Controller
 {
@@ -14,6 +14,13 @@ class CategoryController extends Controller
         $products = $category->product;
         $resultNumber = $products->count();
         return view('shop-grid',compact('products','resultNumber'));
+    }
 
+    public function productTags($id){
+
+        $tag = Tag::findOrFail($id);
+        $products = $tag->product;
+        $resultNumber = $products->count();
+        return view('shop-grid',compact('products', 'tag','resultNumber'));
     }
 }

@@ -27,6 +27,9 @@ Route::get('/shop-grid', 'ProductController@allProducts');
 Route::get('/single-product/{id}', 'ProductController@singleProduct');
 Route::get('/category/{id}', 'CategoryController@selectedCategory');
 
+//++++++++++++++++++++++++++++++++++++ Tags +++++++++++++++++++++++++++++++++++++
+Route::get('/tag/{id}', ['uses'=> 'categoryController@productTags']);
+
 //---------------------------------- Search box ------------------------------------------
 Route::get('/search', 'ProductController@searchProducts');
 
