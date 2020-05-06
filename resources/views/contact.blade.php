@@ -15,26 +15,63 @@
         	<div class="container">
         		<div class="row">
         			<div class="col-lg-8 col-12">
+                        {{-- @if (\Session::has('success'))
+                        <div>
+                            <p>{{ \Session::get('success')}}</p>
+                        </div>
+                        @endif --}}
         				<div class="contact-form-wrap">
         					<h2 class="contact__title">ارتباط با ما</h2>
         					<p>شما میتوانید با پر کردن فرم زیر با ما ارتباط برقرار کنید.</p>
-                            <form id="contact-form" action="#" method="post">
+                            <form id="contact-form" action="{{'/checkCommentsData'}}" method="post">
+                                {{ csrf_field() }}
                                 <div class="single-contact-form space-between">
                                     <input type="text" name="firstname" placeholder="نام*">
+                                    {{-- @if ($errors->has('firstname'))
+                                    <div class="text-danger">
+                                        {{$errors->first('firstname') }}
+                                    </div>
+                                    @endif --}}
                                     <input type="text" name="lastname" placeholder="نام خانوادگی*">
+                                    {{-- @if ($errors->has('lastname'))
+                                    <div class="text-danger">
+                                        {{$errors->first('lastname') }}
+                                    </div>
+                                    @endif --}}
                                 </div>
                                 <div class="single-contact-form space-between">
                                     <input type="email" name="email" placeholder="ایمیل*">
-                                    <input type="text" name="website" placeholder="وب سایت*">
+                                    {{-- @if ($errors->has('email'))
+                                    <div class="text-danger">
+                                        {{$errors->first('email') }}
+                                    </div>
+                                    @endif --}}
+                                    <input type="number" name="phonenumber" placeholder="شماره تلفن">
+                                    {{-- @if ($errors->has('phonenumber'))
+                                    <div class="text-danger">
+                                        {{$errors->first('phonenumber') }}
+                                    </div>
+                                    @endif --}}
                                 </div>
                                 <div class="single-contact-form">
                                     <input type="text" name="subject" placeholder="موضوع*">
+                                    {{-- @if ($errors->has('subject'))
+                                    <div class="text-danger">
+                                        {{$errors->first('subject') }}
+                                    </div>
+                                    @endif --}}
                                 </div>
                                 <div class="single-contact-form message">
                                     <textarea name="message" placeholder="متن پیام خود را اینجا بنویسید..."></textarea>
+                                    {{-- @if ($errors->has('message'))
+                                    <div class="text-danger">
+                                        {{$errors->first('message') }}
+                                    </div>
+                                    @endif --}}
                                 </div>
                                 <div class="contact-btn">
                                     <button type="submit">ارسال پیام</button>
+                                    {{-- <input type="submit" value="ارسال پیام"> --}}
                                 </div>
                             </form>
                         </div>
