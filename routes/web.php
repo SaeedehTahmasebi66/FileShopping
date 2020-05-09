@@ -33,9 +33,12 @@ Route::get('/tag/{id}', ['uses'=> 'categoryController@productTags']);
 //---------------------------------- Search box -----------------------------------------
 Route::get('/search', 'ProductController@searchProducts');
 
-//---------------------------------- Contact Us----------------------------------------
+//---------------------------------- Contact Us -----------------------------------------
 Route::get('/contact', ['uses'=> 'contactController@contact']);
 Route::post('/checkCommentsData', ['uses'=> 'contactController@validation']);
+
+//---------------------------------- Comments -----------------------------------------
+Route::post('/insertComment', ['uses'=> 'CommentController@insertComment']);
 
 //--------------------------------- Pages ------------------------------------------------
 Route::get('/about', function () {return view('about');});

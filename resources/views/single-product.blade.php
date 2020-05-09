@@ -81,28 +81,29 @@
                                     </div>
         						</div>
         					</div>
-        				</div>
-        				{{-- <div class="product__info__detailed">
+                        </div>
+        				<div class="product__info__detailed">
 							<div class="pro_details_nav nav justify-content-start" role="tablist">
-	                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-details" role="tab">Details</a>
-	                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-review" role="tab">Reviews</a>
+	                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-details" role="tab">اطلاعات تکمیلی</a>
+	                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-review" role="tab">دیدگاه ها</a>
 	                        </div>
 	                        <div class="tab__container">
 	                        	<!-- Start Single Tab Content -->
 	                        	<div class="pro__tab_label tab-pane fade show active" id="nav-details" role="tabpanel">
 									<div class="description__attribute">
-										<p>Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.</p>
+										{{-- <p>Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.Ideal for cold-weather training or work outdoors, the Chaz Hoodie promises superior warmth with every wear. Thick material blocks out the wind as ribbed cuffs and bottom band seal in body heat.</p>
 										<ul>
 											<li>• Two-tone gray heather hoodie.</li>
 											<li>• Drawstring-adjustable hood. </li>
 											<li>• Machine wash/dry.</li>
-										</ul>
+                                        </ul> --}}
+                                        <p>{{$product['description']}}</p>
 									</div>
 	                        	</div>
 	                        	<!-- End Single Tab Content -->
 	                        	<!-- Start Single Tab Content -->
 	                        	<div class="pro__tab_label tab-pane fade" id="nav-review" role="tabpanel">
-									<div class="review__attribute">
+									{{-- <div class="review__attribute">
 										<h1>Customer Reviews</h1>
 										<h2>Hastech</h2>
 										<div class="review__ratings__type d-flex">
@@ -145,11 +146,11 @@
 												<p>Posted on 11/6/2018</p>
 											</div>
 										</div>
-									</div>
+									</div> --}}
 									<div class="review-fieldset">
-										<h2>You're reviewing:</h2>
-										<h3>Chaz Kangeroo Hoodie</h3>
-										<div class="review-field-ratings">
+										{{-- <h2>You're reviewing:</h2>
+										<h3>{{$product['name']}}</h3> --}}
+										{{-- <div class="review-field-ratings">
 											<div class="product-review-table">
 												<div class="review-field-rating d-flex">
 													<span>Quality</span>
@@ -182,29 +183,44 @@
 			    									</ul>
 												</div>
 											</div>
-										</div>
+                                        </div> --}}
+
+                                        <h5 class="pb--30">نظر شما در مورد این آموزش ({{$product['name']}}) چیست؟</h5>
 										<div class="review_form_field">
-											<div class="input__box">
-												<span>Nickname</span>
+                                            <form  action="{{'/insertComment'}}" method="post">
+                                                {{ csrf_field() }}
+                                                <input type="hidden" class="form-control " name="id" value="{{$product['id']}}" >
+											{{-- <div class="input__box">
+												<span>نام شما</span>
 												<input id="nickname_field" type="text" name="nickname">
-											</div>
-											<div class="input__box">
+											</div> --}}
+											{{-- <div class="input__box">
 												<span>Summary</span>
 												<input id="summery_field" type="text" name="summery">
-											</div>
+											</div> --}}
 											<div class="input__box">
-												<span>Review</span>
+												<span>متن نظر</span>
 												<textarea name="review"></textarea>
 											</div>
 											<div class="review-form-actions">
-												<button>Submit Review</button>
-											</div>
-										</div>
+                                                <button type="submit">ثبت نظر</button>
+                                                {{-- <input type="submit" value="ثبت نظر"> --}}
+                                            </div>
+                                            </form>
+                                        </div>
+                                        {{-- <div class="form-output pt--30 text-success">
+                                            <p class="form-messege">
+                                        </div> --}}
 									</div>
 	                        	</div>
 	                        	<!-- End Single Tab Content -->
 	                        </div>
-        				</div> --}}
+                        </div>
+                        @if (\Session::has('success'))
+                        <div class="pt--30 text-success">
+                            <p>{{ \Session::get('success')}}</p>
+                        </div>
+                        @endif
 						<div class="wn__related__product pt--100 pb--50">
 							<div class="section__title text-center">
 								<h2 class="title__be--2">آموزش های مرتبط</h2>

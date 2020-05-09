@@ -16,4 +16,7 @@ class Product extends Model
     {
         return $this->morphtoMany("App\Models\Tag","taggable");
     }
+    public function Comment(){
+        return $this->hasMany('App\Models\Comment');
+    }
 }
