@@ -146,7 +146,15 @@
 												<p>Posted on 11/6/2018</p>
 											</div>
 										</div>
-									</div> --}}
+                                    </div> --}}
+                                    <div>
+                                        @foreach($product->Comment()->get() as $C)
+                                        <div style="background-color: #f7f7f7; margin-bottom:10px; padding:5px;">
+                                            <p><strong> {{$C->user_name}} :</strong></p>
+                                            <p style="padding: 5px">{{$C->body}}</p>
+                                        </div>
+                                        @endforeach
+                                    </div>
 									<div class="review-fieldset">
 										{{-- <h2>You're reviewing:</h2>
 										<h3>{{$product['name']}}</h3> --}}
@@ -190,6 +198,7 @@
                                             <form  action="{{'/insertComment'}}" method="post">
                                                 {{ csrf_field() }}
                                                 <input type="hidden" class="form-control " name="id" value="{{$product['id']}}" >
+                                                <input type="hidden" class="form-control " name="type" value="{{'App\Models\Product'}}" >
 											{{-- <div class="input__box">
 												<span>نام شما</span>
 												<input id="nickname_field" type="text" name="nickname">
@@ -241,7 +250,7 @@
 										<div class="product__content content--center">
 											<h4><a href="{{'/single-product'}}">{{$rProducts->name}}</a></h4>
 											<ul class="prize d-flex">
-												<li>{{$rProducts->price}}</li>
+												<li>{{number_format($rProducts->price)}} تومان</li>
 												{{-- <li class="old_prize">$35.00</li> --}}
 											</ul>
 											<div class="action">

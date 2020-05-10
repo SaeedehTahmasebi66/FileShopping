@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    // public function User(){
-    //     return $this->belongsTo('App\User');
-    // }
-    public function Product(){
-        return $this->belongsTo('App\Models\Product');
+    public function User(){
+        return $this->belongsTo('App\User');
+    }
+    public function commentable(){
+        return $this->morphTo();
     }
 }

@@ -15,13 +15,15 @@ class CommentController extends Controller
     public function insertComment(Request $request){
 
         $newComment = new Comment();
-        $newComment->comment_text = $request->post('review');
+        $newComment->body = $request->post('review');
         $newComment->user_id = Auth::id();
-        // $id = Auth::id();
-        $newComment->product_id = $request->post('id');
+        $newComment->user_name = Auth::user()->name;
+        $newComment->commentable_id = $request->post('id');
+        $newComment->commentable_type = $request->post('type');
 
         $newComment->save();
         // return ('دیدگاه شما با موفقیت ارسال شد. متشکریم.');
-        return redirect("single-product/$newComment->product_id")->with('success','پیام شما با موفقیت ارسال شد. متشکریم.');
+        // return redirect("single-product/$newComment->product_id")->with('success','پیام شما با موفقیت ارسال شد. متشکریم.');
+        return back()->with('success','پیام شما با موفقیت ارسال شد. متشکریم.');
     }
 }
