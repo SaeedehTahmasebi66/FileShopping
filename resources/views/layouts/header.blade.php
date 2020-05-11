@@ -17,10 +17,10 @@
 									<div class="megamenu dropdown">
 										<ul class="item item01">
 											<li class="label2"><a href="{{'/category/1'}}">برنامه نویسی</a>
-												<ul>
-													{{-- <li><a href="{{route('shop-grid')}}">برنامه نویسی وب</a></li>
-													<li><a href="{{route('shop-grid')}}">برنامه نویسی اندروید</a></li> --}}
-												</ul>
+												{{-- <ul>
+													<li><a href="{{route('shop-grid')}}">برنامه نویسی وب</a></li>
+													<li><a href="{{route('shop-grid')}}">برنامه نویسی اندروید</a></li>
+												</ul> --}}
 											</li>
 											<li><a href="{{'/category/2'}}">علوم و مهندسی کامپوتر</a></li>
                                             <li><a href="{{'/category/3'}}">هوش مصنوعی</a></li>
@@ -28,6 +28,7 @@
 										</ul>
 									</div>
                                 </li>
+                                <li class="drop with--one--item"><a href="{{'/blog'}}">وبلاگ</a></li>
                                 <li class="drop with--one--item"><a href="{{'/about'}}">درباره ما</a></li>
                                 <li class="drop with--one--item"><a href="{{'/contact'}}">تماس با ما</a></li>
 							</ul>

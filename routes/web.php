@@ -40,10 +40,13 @@ Route::post('/checkCommentsData', ['uses'=> 'contactController@validation']);
 //---------------------------------- Comments -----------------------------------------
 Route::post('/insertComment', ['uses'=> 'CommentController@insertComment']);
 
+//---------------------------------- Blogs -----------------------------------------
+Route::get('/blog', ['uses'=> 'BlogController@index']);
+
 //--------------------------------- Pages ------------------------------------------------
 Route::get('/about', function () {return view('about');});
 Route::get('/contact', function () {return view('contact');});
-Route::get('/blog', function () {return view('blog');});
+
 Route::get('/myaccount', function () {return view('my-account');})->name('myaccount');
 Route::get('/wishlist', function () {return view('wishlist');})->name('wishlist');
 // Route::get('/shop-grid', function () {return view('shop-grid');})->name('shop-grid');
