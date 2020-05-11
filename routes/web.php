@@ -42,6 +42,7 @@ Route::post('/insertComment', ['uses'=> 'CommentController@insertComment']);
 
 //---------------------------------- Blogs -----------------------------------------
 Route::get('/blog', ['uses'=> 'BlogController@index']);
+Route::get('/blog-details/{id}', ['uses'=> 'BlogController@singleBlog']);
 
 //--------------------------------- Pages ------------------------------------------------
 Route::get('/about', function () {return view('about');});

@@ -24,6 +24,6 @@ class CommentController extends Controller
         $newComment->save();
         // return ('دیدگاه شما با موفقیت ارسال شد. متشکریم.');
         // return redirect("single-product/$newComment->product_id")->with('success','پیام شما با موفقیت ارسال شد. متشکریم.');
-        return back()->with('success','پیام شما با موفقیت ارسال شد. متشکریم.');
+        return back()->with('success','دیدگاه شما با موفقیت ارسال شد. متشکریم.');
     }
 }

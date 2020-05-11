@@ -12,4 +12,9 @@ class BlogController extends Controller
         $blogs = Blog::orderBy('created_at','desc')->paginate(3);
         return view('blog',compact('blogs'));
     }
+
+    public function singleBlog($id){
+        $blog = Blog::findOrFail($id);
+        return view('blog-details',compact('blog'));
+    }
 }
