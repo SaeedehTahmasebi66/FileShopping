@@ -16,12 +16,13 @@
                                 <li class="drop"><a href="#">دسته بندی محصولات</a>
 									<div class="megamenu dropdown">
 										<ul class="item item01">
-											<li class="label2"><a href="{{'/category/1'}}">برنامه نویسی</a>
-												{{-- <ul>
+                                            <li ><a href="{{'/category/1'}}">برنامه نویسی</a>
+                                            {{-- <li class="label2"><a href="{{'/category/1'}}">برنامه نویسی</a>
+												<ul>
 													<li><a href="{{route('shop-grid')}}">برنامه نویسی وب</a></li>
 													<li><a href="{{route('shop-grid')}}">برنامه نویسی اندروید</a></li>
-												</ul> --}}
-											</li>
+												</ul>
+											</li> --}}
 											<li><a href="{{'/category/2'}}">علوم و مهندسی کامپوتر</a></li>
                                             <li><a href="{{'/category/3'}}">هوش مصنوعی</a></li>
                                             <li><a href="{{'/shop-grid'}}">همه محصولات</a></li>
@@ -40,140 +41,47 @@
 							<li class="wishlist"><a href="{{route('wishlist')}}"></a></li>
 							<li class="shopcart" id="myCart">
                                 @include('layouts.cart')
-
-							<li class="setting__bar__icon"><a href="{{route('login')}}"></a>
-								{{-- <div class="searchbar__content setting__block">
-									<div class="content-inner">
-										<div class="switcher-currency">
-											<strong class="label switcher-label">
-												<span>Currency</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">USD - US Dollar</span>
-													<ul class="switcher-dropdown">
-														<li>GBP - British Pound Sterling</li>
-														<li>EUR - Euro</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="switcher-currency">
-											<strong class="label switcher-label">
-												<span>Language</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">English01</span>
-													<ul class="switcher-dropdown">
-														<li>English02</li>
-														<li>English03</li>
-														<li>English04</li>
-														<li>English05</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="switcher-currency">
-											<strong class="label switcher-label">
-												<span>Select Store</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">Fashion Store</span>
-													<ul class="switcher-dropdown">
-														<li>Furniture</li>
-														<li>Shoes</li>
-														<li>Speaker Store</li>
-														<li>Furniture</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="switcher-currency">
-											<strong class="label switcher-label">
-												<span>My Account</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<div class="setting__menu">
-														<span><a href="#">Compare Product</a></span>
-														<span><a href="#">My Account</a></span>
-														<span><a href="#">My Wishlist</a></span>
-														<span><a href="#">Sign In</a></span>
-														<span><a href="#">Create An Account</a></span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+                            @guest
+                            <li class="setting__bar__icon"><a href="{{route('login')}}"></a>
+                            @else
+                            <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
 								<div class="searchbar__content setting__block">
 									<div class="content-inner">
 										<div class="switcher-currency">
 											<strong class="label switcher-label">
-												<span>Currency</span>
+												<span>نام کاربری: {{ Auth::user()->name }}</span>
 											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">USD - US Dollar</span>
-													<ul class="switcher-dropdown">
-														<li>GBP - British Pound Sterling</li>
-														<li>EUR - Euro</li>
-													</ul>
-												</div>
-											</div>
 										</div>
 										<div class="switcher-currency">
 											<strong class="label switcher-label">
-												<span>Language</span>
+												<span>
+                                                    <a href="{{ route('profile') }}"> مشاهده حساب کاربری </a>
+                                                </span>
 											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">English01</span>
-													<ul class="switcher-dropdown">
-														<li>English02</li>
-														<li>English03</li>
-														<li>English04</li>
-														<li>English05</li>
-													</ul>
-												</div>
-											</div>
 										</div>
+										{{-- <div class="switcher-currency">
+											<strong class="label switcher-label">
+												<span>
+                                                    <a href="{{ route('profile') }}"> سفارش های من </a>
+                                                </span>
+											</strong>
+										</div> --}}
 										<div class="switcher-currency">
 											<strong class="label switcher-label">
-												<span>Select Store</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">Fashion Store</span>
-													<ul class="switcher-dropdown">
-														<li>Furniture</li>
-														<li>Shoes</li>
-														<li>Speaker Store</li>
-														<li>Furniture</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="switcher-currency">
-											<strong class="label switcher-label">
-												<span>My Account</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<div class="setting__menu">
-														<span><a href="#">Compare Product</a></span>
-														<span><a href="#">My Account</a></span>
-														<span><a href="#">My Wishlist</a></span>
-														<span><a href="#">Sign In</a></span>
-														<span><a href="#">Create An Account</a></span>
-													</div>
-												</div>
-											</div>
+												<span>
+                                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                                        {{ __('خروج از حساب کاربری') }}
+                                                    </a>
+                                                </span>
+                                            </strong>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
 										</div>
 									</div>
-								</div> --}}
+								</div>
 							</li>
+                            @endguest
 						</ul>
 					</div>
 				</div>

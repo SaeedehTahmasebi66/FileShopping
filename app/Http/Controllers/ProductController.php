@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-use App\Models\Category;
+use App\Models\Blog;
 
 class ProductController extends Controller
 {
@@ -12,7 +12,8 @@ class ProductController extends Controller
 
         $newestproducts = Product::orderBy('created_at','desc')->take(6)->get();
         $popularProducts = Product::orderBy('clicks','desc')->take(6)->get();
-        return view('index',compact('newestproducts','popularProducts'));
+        $newestBlog = Blog::orderBy('created_at','desc')->take(3)->get();
+        return view('index',compact('newestproducts','popularProducts', 'newestBlog'));
     }
 
     public function allProducts(){

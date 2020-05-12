@@ -11,14 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'ProductController@index');
 
 //------------------------------- Authentication -----------------------------------------
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'ProductController@index')->name('home');
+
+Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::get('/profile/additional-info/{{id}}', 'ProfileController@update');
 
 //----------------------------- Products & Categories ------------------------------------
 Route::get('/index', 'ProductController@index');
@@ -46,7 +51,6 @@ Route::get('/blog-details/{id}', ['uses'=> 'BlogController@singleBlog']);
 
 //--------------------------------- Pages ------------------------------------------------
 Route::get('/about', function () {return view('about');});
-Route::get('/contact', function () {return view('contact');});
 
 Route::get('/myaccount', function () {return view('my-account');})->name('myaccount');
 Route::get('/wishlist', function () {return view('wishlist');})->name('wishlist');
