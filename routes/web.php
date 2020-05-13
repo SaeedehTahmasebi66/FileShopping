@@ -33,27 +33,26 @@ Route::get('/single-product/{id}', 'ProductController@singleProduct');
 Route::get('/category/{id}', 'CategoryController@selectedCategory');
 
 //----------------------------------- Tags ----------------------------------------------
-Route::get('/tag/{id}', ['uses'=> 'categoryController@productTags']);
+Route::get('/tag/{id}', 'categoryController@productTags');
 
 //---------------------------------- Search box -----------------------------------------
 Route::get('/search', 'ProductController@searchProducts');
 
 //---------------------------------- Contact Us -----------------------------------------
-Route::get('/contact', ['uses'=> 'contactController@contact']);
-Route::post('/checkCommentsData', ['uses'=> 'contactController@validation']);
+Route::get('/contact', 'contactController@index');
+Route::post('/checkCommentsData', 'contactController@validation');
 
-//---------------------------------- Comments -----------------------------------------
-Route::post('/insertComment', ['uses'=> 'CommentController@insertComment']);
+//----------------------------------- Comments -------------------------------------------
+Route::post('/insertComment', 'CommentController@insertComment');
 
-//---------------------------------- Blogs -----------------------------------------
-Route::get('/blog', ['uses'=> 'BlogController@index']);
-Route::get('/blog-details/{id}', ['uses'=> 'BlogController@singleBlog']);
+//------------------------------------ Blogs ---------------------------------------------
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog-details/{id}',  'BlogController@singleBlog');
 
 //--------------------------------- Pages ------------------------------------------------
 Route::get('/about', function () {return view('about');});
 
 Route::get('/myaccount', function () {return view('my-account');})->name('myaccount');
-Route::get('/wishlist', function () {return view('wishlist');})->name('wishlist');
 // Route::get('/shop-grid', function () {return view('shop-grid');})->name('shop-grid');
 
 Route::get('/blog-details', function () {return view('blog-details');})->name('blog-details');
@@ -64,3 +63,8 @@ Route::get('/blog-details', function () {return view('blog-details');})->name('b
 Route::post('/add-to-cart', 'ProductController@addToCart')->name('add-to-cart');
 Route::post('/remove-from-cart', 'ProductController@remove');
 Route::get('/cart', 'ProductController@cart')->name('cart');
+
+//--------------------------------- Wishlist ------------------------------------------------
+Route::get('/wishlist', 'wishlistController@index')->name('wishlist');
+Route::get('/add-to-wishlist/{id}', 'wishlistController@addToWhishlist');
+Route::get('/removeFromWihlist/{id}', 'wishlistController@removeFromWhishlist');

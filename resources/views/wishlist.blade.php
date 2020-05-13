@@ -14,37 +14,38 @@
                                             <tr>
                                                 <th class="product-remove"></th>
                                                 <th class="product-thumbnail"></th>
-                                                <th class="product-name"><span class="nobr">نام محصول</span></th>
-                                                <th class="product-price"><span class="nobr"> قیمت واحد </span></th>
-                                                {{-- <th class="product-stock-stauts"><span class="nobr"> موجودی انبار </span></th> --}}
+                                                <th class="product-name"><span class="nobr">نام آموزش</span></th>
+                                                <th class="product-price"><span class="nobr"> مبلغ  </span></th>
                                                 <th class="product-add-to-cart"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($user->product as $p)
                                             <tr>
-                                                <td class="product-remove"><a href="#">×</a></td>
-                                                <td class="product-thumbnail"><a href="#"><img src="{{asset('assets/images/product/sm-3/1.jpg')}}" alt=""></a></td>
-                                                <td class="product-name"><a href="#">آموزش HTML</a></td>
-                                                <td class="product-price"><span class="amount">30000 تومان</span></td>
-                                                {{-- <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td> --}}
-                                                <td class="product-add-to-cart"><a href="#"> افزودن به سبد خرید</a></td>
+                                                {{-- <form action="/removeFromWihlist/{{$p->id}}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <a href=""><button class="btn btn-danger btn-sm" type="submit">×</button></a>
+                                                </form> --}}
+                                                <td class="product-remove"><a href="/removeFromWihlist/{{$p->id}}">×</a></td>
+                                                @foreach($p->Image()->get() as $Img)
+                                                <td class="product-thumbnail">
+                                                    <a href="/single-product/{{$p->id}}">
+                                                        <img src="{{asset('/') . $Img->path}}" alt="" style="width:100px;height:80px">
+                                                    </a>
+                                                </td>
+                                                @endforeach
+                                                <td class="product-name">
+                                                    <a href="/single-product/{{$p->id}}">{{$p->name}}</a>
+                                                </td>
+                                                <td class="product-price">
+                                                    <span class="amount">{{number_format($p->price)}} تومان</span>
+                                                </td>
+                                                <td class="product-add-to-cart">
+                                                    <a class="cart addTCart" data="{{$p->id}}"> افزودن به سبد خرید</a>
+                                                </td>
                                             </tr>
-                                            <tr>
-                                                <td class="product-remove"><a href="#">×</a></td>
-                                                <td class="product-thumbnail"><a href="#"><img src="{{asset('assets/images/product/sm-3/2.jpg')}}" alt=""></a></td>
-                                                <td class="product-name"><a href="#">آموزش CSS3</a></td>
-                                                <td class="product-price"><span class="amount">45000 تومان</span></td>
-                                                {{-- <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td> --}}
-                                                <td class="product-add-to-cart"><a href="#"> افزودن به سبد خرید</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="product-remove"><a href="#">×</a></td>
-                                                <td class="product-thumbnail"><a href="#"><img src="{{asset('assets/images/product/sm-3/3.jpg')}}" alt=""></a></td>
-                                                <td class="product-name"><a href="#">آموزش پروزه محور jQuery</a></td>
-                                                <td class="product-price"><span class="amount">45000 تومان</span></td>
-                                                {{-- <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td> --}}
-                                                <td class="product-add-to-cart"><a href="#"> افزودن به سبد خرید</a></td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

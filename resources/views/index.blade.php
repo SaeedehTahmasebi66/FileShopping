@@ -36,8 +36,9 @@
 								<div class="action">
 									<div class="actions_inner">
 										<ul class="add_to_links">
-											<li><a class="cart addTCart" data="{{$product->id}}"><i>افزودن به سبد خرید</i></a></li>
-											<li><a class="wishlist" href="wishlist.html"><i>افزودن به علاقه مندی ها</i></a></li>
+                                            <li><a class="cart addTCart" data="{{$product->id}}"><i>افزودن به سبد خرید</i></a></li>
+                                            {{-- <li><a class="wishlist addTWishlist" data="{{$product->id}}"><i>افزودن به علاقه مندی ها</i></a></li> --}}
+											<li><a class="wishlist" href="/add-to-wishlist/{{$product->id}}"><i>افزودن به علاقه مندی ها</i></a></li>
 											{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li> --}}
 											{{-- <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
 										</ul>
@@ -329,7 +330,7 @@
 												<div class="actions_inner">
 													<ul class="add_to_links">
 														<li><a class="cart addTCart" data="{{$p->id}}"><i>افزودن به سبد خرید</i></a></li>
-														<li><a class="wishlist" href="wishlist.html">افزودن به علاقه مندی ها<i></i></a></li>
+														<li><a class="wishlist" href="/add-to-wishlist/{{$p->id}}"><i>افزودن به علاقه مندی ها</i></a></li>
 														{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li> --}}
 														{{-- <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
 													</ul>

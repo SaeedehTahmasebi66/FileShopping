@@ -40,4 +40,10 @@ class User extends Authenticatable
     public function Comment(){
         return $this->hasMany('App\Models\Comment');
     }
+    public function Product(){
+        return $this->belongsToMany('App\Models\Product','wishlist');
+    }
+    public function Role(){
+        return $this->belongsToMany('App\Models\Role');
+    }
 }

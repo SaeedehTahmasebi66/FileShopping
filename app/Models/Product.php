@@ -19,4 +19,8 @@ class Product extends Model
     public function Comment(){
         return $this->morphMany('App\Models\Comment', 'commentable');
     }
+    public function User(){
+        return $this->belongsToMany('App\User','wishlist');
+    }
+
 }

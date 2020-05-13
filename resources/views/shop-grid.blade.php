@@ -100,7 +100,7 @@
 												<div class="actions_inner">
 													<ul class="add_to_links">
 														<li><a class="cart addTCart" data="{{$product->id}}"><i>افزودن به سبد خرید</i></a></li>
-														<li><a class="wishlist" href="{{'/wishlist'}}"><i>افزودن به علاقه مندی ها</i></a></li>
+														<li><a class="wishlist" href="/add-to-wishlist/{{$product->id}}"><i>افزودن به علاقه مندی ها</i></a></li>
 														{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li> --}}
 														{{-- <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li> --}}
 													</ul>
@@ -154,7 +154,8 @@
 	        								</ul>
 	        								<p>{{$product->description}}</p>
 	        								<ul class="cart__action d-flex">
-	        									<li class="cart"><a class="addTCart" data="{{$product->id}}">افزودن به سبد خرید</a></li>
+                                                <li class="cart"><a class="addTCart" data="{{$product->id}}">افزودن به سبد خرید</a></li>
+                                                <li class="wishlist"><a href="/add-to-wishlist/{{$product->id}}"></a></li>
 	        									{{-- <li class="wishlist"><a href="cart.html"></a></li>
 	        									<li class="compare"><a href="cart.html"></a></li> --}}
 	        								</ul>
