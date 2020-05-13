@@ -22,4 +22,10 @@ class ProfileController extends Controller
 
         // return view('profile');
     }
+
+    // public function removeComment($id){
+
+    //     Auth::user()->Comment($id)->delete(); //error
+    //     return redirect()->back();
+    // }
 }

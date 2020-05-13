@@ -20,7 +20,7 @@
                                     @endforeach
         						</div>
         						<div class="content">
-        							<h4><a href="/blog-details/{{$blog->id}}">{{$blog->title}}</a></h4>
+        							<h4><a href="/blog-details/{{$blog->id}}">{{$blog->name}}</a></h4>
         							<ul class="post__meta">
         								<li>نویسنده : <a href="#">{{$blog->author}}</a></li>
         								{{-- <li class="post_separator">/</li> --}}

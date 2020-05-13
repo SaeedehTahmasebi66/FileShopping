@@ -79,6 +79,11 @@
 	        				<div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
 	        					<div class="row">
                                     <!-- Start Single Product -->
+                                    @if ($resultNumber==0)
+                                    <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
+                                       <h6 class="ptb--30 text-danger"> هیچ نتیجه ای یافت نشد. </h6>
+                                    </div>
+                                    @endif
                                     @foreach ($products as $product)
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12" data-product-id="{{$product->id}}">
 			        					<div class="product__thumb">
@@ -120,13 +125,8 @@
                                     @endforeach
 		        					<!-- End Single Product -->
                                 </div>
-	        					<ul class="wn__pagination">
-	        						<li class="active"><a href="#">1</a></li>
-	        						<li><a href="#">2</a></li>
-	        						<li><a href="#">3</a></li>
-	        						<li><a href="#">4</a></li>
-	        						<li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
-	        					</ul>
+                                {{-- pagination --}}
+                                <div style="margin:65px 200px 10px;">{{ $products->links() }}</div>
 	        				</div>
 	        				<div class="shop-grid tab-pane fade" id="nav-list" role="tabpanel">
 	        					<div class="list__view__wrapper">
@@ -164,8 +164,10 @@
                                     </div>
                                     @endforeach
 	        						<!-- End Single Product -->
-	        						<!-- End Single Product --> --}}
-	        					</div>
+	        						<!-- End Single Product -->
+                                </div>
+                                {{-- pagination --}}
+                                <div style="margin:65px 200px 10px;">{{ $products->links() }}</div>
                             </div>
         				</div>
         			</div>

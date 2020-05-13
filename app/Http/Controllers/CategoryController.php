@@ -11,7 +11,7 @@ class CategoryController extends Controller
     public function selectedCategory($id){
 
         $category = Category::findOrFail($id);
-        $products = $category->product;
+        $products = $category->product()->paginate(9);
         $resultNumber = $products->count();
         return view('shop-grid',compact('products','resultNumber'));
     }
@@ -19,7 +19,7 @@ class CategoryController extends Controller
     public function productTags($id){
 
         $tag = Tag::findOrFail($id);
-        $products = $tag->product;
+        $products = $tag->product()->paginate(9);
         $resultNumber = $products->count();
         return view('shop-grid',compact('products', 'tag','resultNumber'));
     }

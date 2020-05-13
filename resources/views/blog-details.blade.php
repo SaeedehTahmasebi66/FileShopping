@@ -13,7 +13,7 @@
                                 </div>
 								<div class="post_wrapper">
 									<div class="post_header">
-										<h2>{{$blog->title}}</h2>
+										<h2>{{$blog->name}}</h2>
 										<div class="blog-date-categori">
 											{{-- <ul>
 												<li>June 27, 2018</li>

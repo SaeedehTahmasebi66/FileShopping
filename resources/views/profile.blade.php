@@ -52,7 +52,7 @@
                         <p>هیچ سفارشی وجود ندارد!</p>
                     </div>
                     <div class="pro__tab_label tab-pane fade" id="nav-wish" role="tabpanel">
-                        <h4 class="pb--10"> لیست علاقه مندی ها </h4>
+                        <h4 class="pb--30"> لیست علاقه مندی ها </h4>
                         <div>
                             <table>
                                 @foreach ($user->product as $p)
@@ -68,7 +68,27 @@
                     </div>
                     <div class="pro__tab_label tab-pane fade" id="nav-comment" role="tabpanel">
                         <h4 class="pb--10"> نقد و نظرات</h4>
-                        <p> هیچ دیدگاهی ثبت نشده است. </p>
+                        {{-- <p> هیچ دیدگاهی ثبت نشده است. </p> --}}
+                        <div>
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>عنوان محصول یا مطلب</th>
+                                    <th>دیدگاه شما</th>
+                                    {{-- <th> </th> --}}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($user->comment as $c)
+                                <tr>
+                                    <td> {{$c->commentable->name}}</td>
+                                    <td> {{$c->body}}  </td>
+                                    {{-- <td> <a href="/removeComment/{{$c->id}}"> حذف </a></td> --}}
+                                </tr>
+                                @endforeach
+                            </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="pro__tab_label tab-pane fade" id="nav-message" role="tabpanel">
                         <h4 class="pb--10">  پیغام های من </h4>

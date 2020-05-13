@@ -18,7 +18,8 @@ class ProductController extends Controller
 
     public function allProducts(){
 
-        $products = Product::all();
+        // $products = Product::all();
+        $products = Product::paginate(9);
         $resultNumber = $products->count();
         return view('shop-grid',compact('products','resultNumber'));
     }
@@ -28,8 +29,8 @@ class ProductController extends Controller
         //find the product
         $product = Product::findOrFail($id);
 
-        //incremant the clicks on the product
-        // $product->increment('clicks');  // Increment the value in the clicks column
+        // Increment the value in the clicks column
+        // $product->increment('clicks');
 
         //finding related products
         $relatedProducts = Product::where('category_id',$product['category_id'])->get();
@@ -37,14 +38,13 @@ class ProductController extends Controller
         return view('single-product',compact('product','relatedProducts'));
     }
 
-
     public function searchProducts(Request $request){
 
         $term = $request->post('search');
         $products = Product::whereHas('category', function($query) use($term) {
                     $query->where('name', 'LIKE', "%$term%");
                     })->orWhere('name','LIKE',"%$term%")
-                    ->orderBy('name','asc')->get();
+                    ->orderBy('name','asc')->paginate(9);
         $resultNumber = $products->count();
         return view('shop-grid',compact('products','resultNumber'));
     }

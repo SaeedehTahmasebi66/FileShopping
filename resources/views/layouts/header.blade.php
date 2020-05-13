@@ -30,7 +30,7 @@
 									</div>
                                 </li>
                                 <li class="drop with--one--item"><a href="{{'/blog'}}">وبلاگ</a></li>
-                                <li class="drop with--one--item"><a href="{{'/about'}}">درباره ما</a></li>
+                                {{-- <li class="drop with--one--item"><a href="{{'/about'}}">درباره ما</a></li> --}}
                                 <li class="drop with--one--item"><a href="{{'/contact'}}">تماس با ما</a></li>
 							</ul>
 						</nav>
