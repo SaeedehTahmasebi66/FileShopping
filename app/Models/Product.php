@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -21,6 +22,9 @@ class Product extends Model
     }
     public function User(){
         return $this->belongsToMany('App\User','wishlist');
+    }
+    public function getProductExcerptAttribute(){
+        return Str::words($this->description, '10');
     }
 
 }

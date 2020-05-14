@@ -18,7 +18,6 @@ Route::get('/', 'ProductController@index');
 
 //------------------------------- Authentication -----------------------------------------
 Auth::routes();
-
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'ProductController@index')->name('home');
 Route::get('/profile', 'ProfileController@index')->name('profile');
@@ -62,3 +61,20 @@ Route::get('/removeFromWihlist/{id}', 'wishlistController@removeFromWhishlist');
 //------------------------------- Some Other Pages ------------------------------------------------
 Route::get('/about', function () {return view('about');});
 Route::get('/myaccount', function () {return view('my-account');})->name('myaccount');
+
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++  Admin   +++++++++++++++++++++++++++++++++++++
+Route::get('/admin', function () {return view('admin.index');});
+Route::get('/admin/index2', function () {return view('admin.index2');});
+Route::get('/admin/index3', function () {return view('admin.index3');});
+
+//     ------------------------------------ admin/users  ---------------------------
+Route::resource('admin/users', 'Admin\UserController');
+
+//     ----------------------------------- admin/products --------------------------
+Route::resource('admin/products', 'Admin\ProductController');
+
+//      ----------------------------------- admin/comments --------------------------
+Route::resource('admin/comment', 'Admin\CommentController');

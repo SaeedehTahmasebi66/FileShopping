@@ -68,7 +68,6 @@
                     </div>
                     <div class="pro__tab_label tab-pane fade" id="nav-comment" role="tabpanel">
                         <h4 class="pb--10"> نقد و نظرات</h4>
-                        {{-- <p> هیچ دیدگاهی ثبت نشده است. </p> --}}
                         <div>
                             <table>
                                 <thead>
